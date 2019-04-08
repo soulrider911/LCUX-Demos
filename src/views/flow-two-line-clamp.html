@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trucating multiline labels for flow elements.</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="scripts/vendor/clamp.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="controls slds-border">
+    <div class="slds-form-element">
+      <label class="slds-form-element__label" for="#value-changer">Change text label value</label>
+      <div class="slds-form-element__control"><div class="slds-combobox_container">
+        <div class="slds-combobox" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+          <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+            <input class="slds-input slds-combobox__input slds-combobox__input-value" id="value-changer" aria-autocomplete="list" aria-controls="stacked-listbox-id-01" autocomplete="off" role="textbox" type="text" placeholder="Enter text...">
+            <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" id="clear_value" title="Clear the text input">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"></use>
+              </svg><span class="slds-assistive-text">Clear the text input</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br>
+    <div class="slds-form-element">
+      <div class="slds-form-element__control">
+        <div class="slds-checkbox">
+          <input type="checkbox" name="options" id="checkbox-color" value="checkbox-color" />
+          <label class="slds-checkbox__label" for="checkbox-color">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-form-element__label">Darken BG color</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div> <!-- display controls -->
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Flow elements Two Line Labels</h1>
+    <p class="slds-text-body--regular slds-m-bottom--large">Trucating multiline labels for flow elements. There are plenty of examples in the wild, but here are a few explorative solutions.</p>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-4">
+        <h2 class="slds-text-heading--medium">Today</h2>
+        <br>
+        <p class="slds-text-heading_small">Text label is above the element label. Element label is set to a max width of 132px resulting in text truncation very often. Also we are using &lt;DIV&gt; for text containers may want to use &lt;P&gt; for better/more semantic markup</a></p>
+      </div>
+      <div class="slds-col slds-size_1-of-4 slds-is-relative ">
+        <div class="flow-element">
+          <div class="icon-container">
+            <button class="slds-icon_container slds-icon-standard-waits" title='Assignment element, "Order some pizza then notify customer when its out for delivery". To delete, press the Delete key.'>
+              <svg class="slds-icon slds-icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#assignment"></use>
+              </svg>
+              <span class="slds-assistive-text">Description of icon when needed</span>
+            </button>
+            <button class="end-point"></button>
+          </div>
+          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
+            <p class="text-label slds-text-body_regular slds-truncate">Order some pizza then notify customer when its out for delivery</p>
+            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+          </div>
+        </div> <!-- flow element -->
+      </div><!-- SLDS Col -->
+    </div> <!-- SLDS Grid -->
+    <hr>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-4">
+        <h2 class="slds-text-heading--medium">Reordered labels + CSS multiline truncation</h2>
+        <br>
+        <p class="slds-text-heading_small">This method uses some nifty CSS hacks. <a href="http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/">Hacking UI article</a></p>
+          <ul class="slds-list_dotted"> 
+            <li>:before and :after pseudo elements </li>
+            <li>Requires a solid background color as the "..." has a background color that must match the docuemnt background</li>  
+            <li>Requires justified text</li>
+          </ul> 
+      </div>
+      <div class="slds-col slds-size_1-of-4 slds-is-relative ">
+        <div class="flow-element">
+          <div class="icon-container">
+            <button class="slds-icon_container slds-icon-standard-waits" title='Assignment element, "Order some pizza then notify customer when its out for delivery". To delete, press the Delete key.'>
+              <svg class="slds-icon slds-icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#assignment"></use>
+              </svg>
+              <span class="slds-assistive-text">Description of icon when needed</span>
+            </button>
+            <button class="end-point"></button>
+          </div>
+          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
+            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+            <p class="text-label slds-text-body_regular block-with-text">Order some pizza then notify customer when its out for delivery</p>
+          </div>
+        </div> <!-- flow element -->
+      </div><!-- SLDS Col -->
+    </div> <!-- SLDS Grid -->
+    <hr>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-4">
+        <h2 class="slds-text-heading--medium">-webkit-line-clamp method</h2>
+        <br>
+        <p class="slds-text-heading_small">This is a <a href="https://caniuse.com/#search=line-clamp">somewhat suppoerted</a> method using some webkit specific properties. <a href="http://dropshado.ws/post/1015351370/webkit-line-clamp">dropshado.ws</a></p>
+          <ul class="slds-list_dotted"> 
+            <li>Uses two prototypical properties: -webkit-line-clamp: 2; -webkit-box-orient: vertical; </li>
+          </ul> 
+      </div>
+      <div class="slds-col slds-size_1-of-4 slds-is-relative ">
+        <div class="flow-element">
+          <div class="icon-container">
+            <button class="slds-icon_container slds-icon-standard-waits" title='Assignment element, "Order some pizza then notify customer when its out for delivery". To delete, press the Delete key.'>
+              <svg class="slds-icon slds-icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#assignment"></use>
+              </svg>
+              <span class="slds-assistive-text">Description of icon when needed</span>
+            </button>
+            <button class="end-point"></button>
+          </div>
+          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
+            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+            <p class="text-label slds-text-body_regular line-clamp">Order some pizza then notify customer when its out for delivery</p>
+          </div>
+        </div> <!-- flow element -->
+      </div><!-- SLDS Col -->
+    </div> <!-- SLDS Grid -->
+    <hr>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-4">
+        <h2 class="slds-text-heading--medium">Fade method with gradient</h2>
+        <br>
+        <p class="slds-text-heading_small">This technique is actually somewhat common, and uses a CSS gradient to overlay the text in comination with overflow: hidden.</p>
+          <ul class="slds-list_dotted"> 
+            <li>Uses :after pseudo element</li>
+            <li>Requires background color of docuement to match gradient</li>
+          </ul> 
+      </div>
+      <div class="slds-col slds-size_1-of-4 slds-is-relative ">
+        <div class="flow-element">
+          <div class="icon-container">
+            <button class="slds-icon_container slds-icon-standard-waits" title='Assignment element, "Order some pizza then notify customer when its out for delivery". To delete, press the Delete key.'>
+              <svg class="slds-icon slds-icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#assignment"></use>
+              </svg>
+              <span class="slds-assistive-text">Description of icon when needed</span>
+            </button>
+            <button class="end-point"></button>
+          </div>
+          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
+            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+            <p class="text-label slds-text-body_regular fade-clamp">Order some pizza then notify customer when its out for delivery</p>
+          </div>
+        </div> <!-- flow element -->
+      </div><!-- SLDS Col -->
+    </div> <!-- SLDS Grid -->
+    <hr>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-4">
+        <h2 class="slds-text-heading--medium">Clamp.js</h2>
+        <br>
+        <p class="slds-text-heading_small"><a href="https://github.com/josephschmitt/Clamp.js">Clamp.js</a> is the most versatile and solid, but requires adding JS.</p>
+          <ul class="slds-list_dotted"> 
+            <li>Super easy to implement: $clamp(myHeader, {clamp: 3});</li>
+            <li>Very Lightwiegh: 9.5KB, but its another server call</li>
+            <li>There is another similar lib <a href="https://github.com/ftlabs/ftellipsis">ftellipsis</a> 4.5kb.</li>
+          </ul> 
+      </div>
+      <div class="slds-col slds-size_1-of-4 slds-is-relative ">
+        <div class="flow-element">
+          <div class="icon-container">
+            <button class="slds-icon_container slds-icon-standard-waits" title='Assignment element, "Order some pizza then notify customer when its out for delivery". To delete, press the Delete key.'>
+              <svg class="slds-icon slds-icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#assignment"></use>
+              </svg>
+              <span class="slds-assistive-text">Description of icon when needed</span>
+            </button>
+            <button class="end-point"></button>
+          </div>
+          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
+            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+            <p class="text-label slds-text-body_regular" id="clamp-me">Order some pizza then notify customer when its out for delivery</p>
+          </div>
+        </div> <!-- flow element -->
+      </div><!-- SLDS Col -->
+    </div> <!-- SLDS Grid -->
+  </div>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  
+  <script type="text/javascript">
+    var clamp_me = document.getElementById("clamp-me");
+    $clamp(clamp_me, {clamp: 2});
+
+    $(function(){
+      var checkbox = $("#checkbox-color");
+      var input = $("#value-changer");
+      var clear = $("#clear_value");
+      var text_labels = $(".text-label");
+
+      checkbox.change(function(){
+        if( checkbox.is(':checked')){
+          $("body").addClass("darken");
+        }else{
+          $("body").removeClass("darken");
+        }
+      });
+      input.keyup(function(){
+        var msg = $(this).val()
+        console.log(msg);
+        text_labels.text(msg);
+      });
+      clear.on("click" , function(){
+        console.log("click");
+        input.val("")
+        text_labels.text("Order some pizza then notify customer when its out for delivery");
+      });
+    })
+  </script>
+  <script src="/scripts/vendor/clamp.min.js"></script>
+</body>
+</html>
+  
