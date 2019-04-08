@@ -13,6 +13,7 @@ $static-font-path: '/assets/fonts/webfonts';
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
 @import 'footer';
+@import 'custom';
 
 //
 // We can also add styles directly in this file, like so:

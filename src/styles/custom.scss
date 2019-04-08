@@ -1,0 +1,129 @@
+//
+// Prototype styles (using the Sass CSS preprocessor)
+//
+
+// Flow button element overrides
+.flow-element{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 160px; // only for demo
+  .icon-container{
+    position: relative;
+    button[class*="slds-icon"]{
+      border: none;
+      padding: 0;
+    }
+    .end-point{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border: 2px solid #fff;
+      box-shadow: inset 0 0 0 2px rgb(150, 148, 146);
+      background-color: rgb(255, 255, 255);
+      transition: box-shadow .1s ease,background-color .25s ease-out;
+      top: 38px;
+      left: 14px;
+      z-index: 300;
+      &:focus{
+        box-shadow: inset 0 0 0 2px rgb(0, 112, 210), 0 0 3px #0070D2;
+        transform: scale(1.2);
+        outline: none;
+      }
+    }
+  }
+  
+  .text-container{
+    .text-label{
+      font-weight: 700;
+      word-break: break-all;
+    }
+  }
+}
+
+// ----------------------------
+// Demo of line clamp styles
+// ----------------------------
+
+/* styles for '...' */ 
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 2.4em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  
+  /* */
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  width: 1em;
+  /* set width and height */
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
+
+.line-clamp {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+}
+
+.fade-clamp{
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+  height: 2.4rem; /* exactly three lines */
+  &:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 1.2em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, #fafaf9 90%);
+  }
+}
+
+.controls{
+  background:rgba(255,255,255,.8);
+  width: 350px;
+  position: fixed;
+  left:20px;
+  top: 20px;
+  padding: 15px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+}
+body.darken{
+  background-color: #b1b1b1;
+}
