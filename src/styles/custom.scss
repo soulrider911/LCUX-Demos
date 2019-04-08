@@ -9,9 +9,13 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 160px; // only for demo
+  width: 140px; // only for demo4
+  padding: 8px;
+  border-radius: 0.25rem;
   &.search{
-    
+    box-shadow: 0 0 0 1px #ff9a3c;
+    background: rgba(255,251,205,0.5);
+
   }
   .icon-container{
     position: relative;
@@ -38,11 +42,11 @@
       }
     }
   }
-  
+
   .text-container{
     .text-label{
       font-weight: 700;
-      word-break: break-all;
+      word-break: word;
     }
   }
 }
@@ -51,19 +55,19 @@
 // Demo of line clamp styles
 // ----------------------------
 
-/* styles for '...' */ 
+/* styles for '...' */
 .block-with-text {
   /* hide text if it more than N lines  */
   overflow: hidden;
   /* for set '...' in absolute position */
-  position: relative; 
+  position: relative;
   /* use this value to count block height */
   line-height: 1.2em;
   /* max-height = line-height (1.2) * lines max number (3) */
-  max-height: 2.4em; 
+  max-height: 2.4em;
   /* fix problem when last visible word doesn't adjoin right side  */
   text-align: justify;
-  
+
   /* */
   margin-right: -1em;
   padding-right: 1em;
@@ -96,7 +100,7 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
 }
 
 .fade-clamp{
@@ -110,9 +114,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 80%;
     height: 1.2em;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, #fafaf9 90%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fafaf9 90%);
   }
 }
 

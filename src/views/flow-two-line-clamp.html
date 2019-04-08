@@ -40,6 +40,13 @@
             <span class="slds-form-element__label">Darken BG color</span>
           </label>
         </div>
+        <div class="slds-checkbox">
+          <input type="checkbox" name="options" id="checkbox-search" value="checkbox-search" />
+          <label class="slds-checkbox__label" for="checkbox-search">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-form-element__label">Search style</span>
+          </label>
+        </div>
       </div>
     </div>
   </div> <!-- display controls -->
@@ -63,7 +70,7 @@
             </button>
             <button class="end-point"></button>
           </div>
-          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
+          <div class="text-container slds-m-top_x-small" style="max-width:98%;">
             <p class="text-label slds-text-body_regular slds-truncate">Order some pizza then notify customer when its out for delivery</p>
             <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
           </div>
@@ -76,11 +83,11 @@
         <h2 class="slds-text-heading--medium">Reordered labels + CSS multiline truncation</h2>
         <br>
         <p class="slds-text-heading_small">This method uses some nifty CSS hacks. <a href="http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/">Hacking UI article</a></p>
-          <ul class="slds-list_dotted"> 
+          <ul class="slds-list_dotted">
             <li>:before and :after pseudo elements </li>
-            <li>Requires a solid background color as the "..." has a background color that must match the docuemnt background</li>  
+            <li>Requires a solid background color as the "..." has a background color that must match the docuemnt background</li>
             <li>Requires justified text</li>
-          </ul> 
+          </ul>
       </div>
       <div class="slds-col slds-size_1-of-4 slds-is-relative ">
         <div class="flow-element">
@@ -106,9 +113,9 @@
         <h2 class="slds-text-heading--medium">-webkit-line-clamp method</h2>
         <br>
         <p class="slds-text-heading_small">This is a <a href="https://caniuse.com/#search=line-clamp">somewhat suppoerted</a> method using some webkit specific properties. <a href="http://dropshado.ws/post/1015351370/webkit-line-clamp">dropshado.ws</a></p>
-          <ul class="slds-list_dotted"> 
+          <ul class="slds-list_dotted">
             <li>Uses two prototypical properties: -webkit-line-clamp: 2; -webkit-box-orient: vertical; </li>
-          </ul> 
+          </ul>
       </div>
       <div class="slds-col slds-size_1-of-4 slds-is-relative ">
         <div class="flow-element">
@@ -134,10 +141,10 @@
         <h2 class="slds-text-heading--medium">Fade method with gradient</h2>
         <br>
         <p class="slds-text-heading_small">This technique is actually somewhat common, and uses a CSS gradient to overlay the text in comination with overflow: hidden.</p>
-          <ul class="slds-list_dotted"> 
+          <ul class="slds-list_dotted">
             <li>Uses :after pseudo element</li>
             <li>Requires background color of docuement to match gradient</li>
-          </ul> 
+          </ul>
       </div>
       <div class="slds-col slds-size_1-of-4 slds-is-relative ">
         <div class="flow-element">
@@ -163,11 +170,11 @@
         <h2 class="slds-text-heading--medium">Clamp.js</h2>
         <br>
         <p class="slds-text-heading_small"><a href="https://github.com/josephschmitt/Clamp.js">Clamp.js</a> is the most versatile and solid, but requires adding JS.</p>
-          <ul class="slds-list_dotted"> 
+          <ul class="slds-list_dotted">
             <li>Super easy to implement: $clamp(myHeader, {clamp: 3});</li>
             <li>Very Lightwiegh: 9.5KB, but its another server call</li>
             <li>There is another similar lib <a href="https://github.com/ftlabs/ftellipsis">ftellipsis</a> 4.5kb.</li>
-          </ul> 
+          </ul>
       </div>
       <div class="slds-col slds-size_1-of-4 slds-is-relative ">
         <div class="flow-element">
@@ -191,22 +198,30 @@
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
-  
+
   <script type="text/javascript">
     var clamp_me = document.getElementById("clamp-me");
     $clamp(clamp_me, {clamp: 2});
 
     $(function(){
-      var checkbox = $("#checkbox-color");
+      var darken = $("#checkbox-color");
+      var search = $("#checkbox-search");
       var input = $("#value-changer");
       var clear = $("#clear_value");
       var text_labels = $(".text-label");
 
-      checkbox.change(function(){
-        if( checkbox.is(':checked')){
+      darken.change(function(){
+        if( darken.is(':checked')){
           $("body").addClass("darken");
         }else{
           $("body").removeClass("darken");
+        }
+      });
+      search.change(function(){
+        if( search.is(':checked')){
+          $(".flow-element").addClass("search");
+        }else{
+          $(".flow-element").removeClass("search");
         }
       });
       input.keyup(function(){
@@ -224,4 +239,3 @@
   <script src="/scripts/vendor/clamp.min.js"></script>
 </body>
 </html>
-  
