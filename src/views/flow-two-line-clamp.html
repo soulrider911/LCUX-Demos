@@ -9,46 +9,13 @@
   <script src="scripts/vendor/clamp.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <meta name="robots" content="noindex, nofollow" />
+  <meta charset='utf-8'>
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
   <div class="controls slds-border">
-    <div class="slds-form-element">
-      <label class="slds-form-element__label" for="#value-changer">Change text label value</label>
-      <div class="slds-form-element__control"><div class="slds-combobox_container">
-        <div class="slds-combobox" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-          <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-            <input class="slds-input slds-combobox__input slds-combobox__input-value" id="value-changer" aria-autocomplete="list" aria-controls="stacked-listbox-id-01" autocomplete="off" role="textbox" type="text" placeholder="Enter text...">
-            <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" id="clear_value" title="Clear the text input">
-              <svg class="slds-button__icon" aria-hidden="true">
-                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"></use>
-              </svg><span class="slds-assistive-text">Clear the text input</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <br>
-    <div class="slds-form-element">
-      <div class="slds-form-element__control">
-        <div class="slds-checkbox">
-          <input type="checkbox" name="options" id="checkbox-color" value="checkbox-color" />
-          <label class="slds-checkbox__label" for="checkbox-color">
-            <span class="slds-checkbox_faux"></span>
-            <span class="slds-form-element__label">Darken BG color</span>
-          </label>
-        </div>
-        <div class="slds-checkbox">
-          <input type="checkbox" name="options" id="checkbox-search" value="checkbox-search" />
-          <label class="slds-checkbox__label" for="checkbox-search">
-            <span class="slds-checkbox_faux"></span>
-            <span class="slds-form-element__label">Search style</span>
-          </label>
-        </div>
-      </div>
-    </div>
+    {% include "_two_ele_display_controls.html" %}
   </div> <!-- display controls -->
   <div class="slds-p-around--large slds-container--center slds-container--medium">
     <h1 class="slds-text-heading--large">Flow elements Two Line Labels</h1>
@@ -209,7 +176,10 @@
       var input = $("#value-changer");
       var clear = $("#clear_value");
       var text_labels = $(".text-label");
+      var radios = $(".alignment input[type='radio']");
+      console.log(radios);
 
+      //Body background
       darken.change(function(){
         if( darken.is(':checked')){
           $("body").addClass("darken");
@@ -217,6 +187,8 @@
           $("body").removeClass("darken");
         }
       });
+
+      //search state
       search.change(function(){
         if( search.is(':checked')){
           $(".flow-element").addClass("search");
@@ -224,6 +196,13 @@
           $(".flow-element").removeClass("search");
         }
       });
+      radios.on("click" , function(){
+        var t_alignment = ($(this).val());
+        console.log(t_alignment)
+        $(".text-label").css('text-align' , t_alignment );
+      })
+
+      // Text replacement
       input.keyup(function(){
         var msg = $(this).val()
         console.log(msg);
