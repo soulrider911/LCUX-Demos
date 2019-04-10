@@ -3,14 +3,16 @@
 //
 
 // Flow button element overrides
+$ele-size: 140px;
+$ele-padding: 8px;
 .flow-element{
   position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 140px; // only for demo4
-  padding: 8px;
+  width: $ele-size; // only for demo4
+  padding: $ele-padding;
   border-radius: 0.25rem;
   &.search{
     box-shadow: 0 0 0 1px #ff9a3c;
@@ -44,9 +46,12 @@
   }
 
   .text-container{
+    max-width: $ele-size - $ele-padding;
     .text-label{
-      font-weight: 700;
-      word-break: word;
+      font-size: .875rem;// $font-size-4
+      color: #3e3e3c;
+    }
+    .text-element-type{
     }
   }
 }
@@ -119,7 +124,11 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fafaf9 90%);
   }
 }
-
+.overflow-method{
+  overflow: hidden;
+  word-wrap: break-word;
+  max-height: 2.4rem;
+}
 .controls{
   background:rgba(255,255,255,.8);
   width: 300px;
