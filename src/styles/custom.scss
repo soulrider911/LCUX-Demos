@@ -124,6 +124,9 @@ $ele-padding: 8px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fafaf9 90%);
   }
 }
+.flow-element.search .fade-clamp:after{
+  background: linear-gradient(to right, rgba(255,251,205, 0) 0%, rgba(255,251,205, 1) 100%);
+}
 .overflow-method{
   overflow: hidden;
   word-wrap: break-word;
