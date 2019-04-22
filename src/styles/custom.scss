@@ -146,3 +146,10 @@ $ele-padding: 8px;
 body.darken{
   background-color: #b1b1b1;
 }
+
+.header_utilities{
+  border-bottom: 1px solid #dddbda;
+  .slds-form-element{
+    display: inline-block;
+  }
+}
