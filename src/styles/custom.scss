@@ -1,7 +1,9 @@
 //
 // Prototype styles (using the Sass CSS preprocessor)
 //
-
+body, html{
+  background: #fff;
+}
 // Flow button element overrides
 $ele-size: 140px;
 $ele-padding: 8px;
@@ -151,5 +153,16 @@ body.darken{
   border-bottom: 1px solid #dddbda;
   .slds-form-element{
     display: inline-block;
+  }
+}
+
+//accordions demo4
+
+.section-animated{
+  svg{
+    transition: transform .15s ease;
+  }
+  &.slds-open svg{
+    transform: rotate(0);
   }
 }
