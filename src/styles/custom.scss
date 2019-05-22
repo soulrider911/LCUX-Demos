@@ -157,12 +157,54 @@ body.darken{
 }
 
 //accordions demo4
-
 .section-animated{
   svg{
     transition: transform .15s ease;
   }
   &.slds-open svg{
     transform: rotate(0);
+  }
+}
+
+/* -------------------
+// Resource panel
+------------------- */
+
+$panel-width: 320px;
+.slds-panel{
+  height: 100vh;
+  overflow-x: hidden;
+  .slds-panel__header{
+    transition: padding .15s ease;
+  }
+  .slds-panel__close{
+    transform: translateX(-42px);
+    transition: all .2s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.flow_resource_detail,
+.flow_resource_list{
+  width: 100%;
+  flex: none;
+  transition: margin .15s ease-in-out, opacity 1.5s ease;
+}
+.flow_resource_detail{
+  opacity: 0;
+}
+//transition state
+.show_details{
+  .slds-panel__close{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  .flow_resource_list{
+    opacity: 0;
+    margin-left: -$panel-width;
+  }
+  .flow_resource_detail{
+    opacity: 1;
   }
 }
