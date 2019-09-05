@@ -208,3 +208,29 @@ $panel-width: 320px;
     opacity: 1;
   }
 }
+
+
+/* -------------------
+// Nesting Sections Fix
+------------------- */
+
+.slds-section__content {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.slds-section.slds-is-open > .slds-section__content {
+  padding-top: 0.5rem;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  // background: red;
+}
+.slds-section.slds-is-open > .slds-section__title-action-icon {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform-origin: 45%;
+  transform-origin: 45%;
+}
