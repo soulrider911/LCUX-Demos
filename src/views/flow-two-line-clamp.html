@@ -39,7 +39,7 @@
           </div>
           <div class="text-container slds-m-top_x-small" style="max-width:98%;">
             <p class="text-label slds-text-body_regular slds-truncate">Order some pizza then notify customer when its out for delivery</p>
-            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+            <p class="text-element-type slds-truncate slds-text-body_regular slds-text-align_center">Assignment</p>
           </div>
         </div> <!-- flow element -->
       </div><!-- SLDS Col -->
@@ -67,8 +67,8 @@
             </button>
             <button class="end-point"></button>
           </div>
-          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
-            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+          <div class="text-container slds-m-top_x-small">
+            <p class="text-element-type slds-truncate slds-text-body_regular slds-text-align_center">Assignment</p>
             <p class="text-label slds-text-body_regular block-with-text">Order some pizza then notify customer when its out for delivery</p>
           </div>
         </div> <!-- flow element -->
@@ -95,8 +95,8 @@
             </button>
             <button class="end-point"></button>
           </div>
-          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
-            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+          <div class="text-container slds-m-top_x-small">
+            <p class="text-element-type slds-truncate slds-text-body_regular slds-text-align_center">Assignment</p>
             <p class="text-label slds-text-body_regular line-clamp">Order some pizza then notify customer when its out for delivery</p>
           </div>
         </div> <!-- flow element -->
@@ -110,6 +110,7 @@
         <p class="slds-text-heading_small">This technique is actually somewhat common, and uses a CSS gradient to overlay the text in comination with overflow: hidden.</p>
           <ul class="slds-list_dotted">
             <li>Uses :after pseudo element</li>
+            <li>Requires fixed height, max-height will not work </li>
             <li>Requires background color of docuement to match gradient</li>
           </ul>
       </div>
@@ -124,8 +125,8 @@
             </button>
             <button class="end-point"></button>
           </div>
-          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
-            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+          <div class="text-container slds-m-top_x-small">
+            <p class="text-element-type slds-truncate slds-text-body_regular slds-text-align_center">Assignment</p>
             <p class="text-label slds-text-body_regular fade-clamp">Order some pizza then notify customer when its out for delivery</p>
           </div>
         </div> <!-- flow element -->
@@ -154,9 +155,37 @@
             </button>
             <button class="end-point"></button>
           </div>
-          <div class="text-container slds-m-top_x-small" style="max-width:160px;">
-            <p class="text-element-type slds-text-body_regular slds-text-align_center">Assignment</p>
+          <div class="text-container slds-m-top_x-small">
+            <p class="text-element-type slds-truncate slds-text-body_regular slds-text-align_center">Assignment</p>
             <p class="text-label slds-text-body_regular" id="clamp-me">Order some pizza then notify customer when its out for delivery</p>
+          </div>
+        </div> <!-- flow element -->
+      </div><!-- SLDS Col -->
+    </div> <!-- SLDS Grid -->
+    <hr>
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-4">
+        <h2 class="slds-text-heading--medium">Overflow hidden</h2>
+        <br>
+        <p class="slds-text-heading_small">Simply use overflow hidden with a max height to literally cut any overflow text</p>
+          <ul class="slds-list_dotted">
+            <li>No elegant at all but it works...</li>
+          </ul>
+      </div>
+      <div class="slds-col slds-size_1-of-4 slds-is-relative ">
+        <div class="flow-element">
+          <div class="icon-container">
+            <button class="slds-icon_container slds-icon-standard-waits" title='Assignment element, "Order some pizza then notify customer when its out for delivery". To delete, press the Delete key.'>
+              <svg class="slds-icon slds-icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#assignment"></use>
+              </svg>
+              <span class="slds-assistive-text">Description of icon when needed</span>
+            </button>
+            <button class="end-point"></button>
+          </div>
+          <div class="text-container slds-m-top_x-small">
+            <p class="text-element-type slds-truncate slds-text-body_regular slds-text-align_center slds-truncate">Assignment</p>
+            <p class="text-label slds-text-body_regular overflow-method">Order some pizza then notify customer when its out for delivery</p>
           </div>
         </div> <!-- flow element -->
       </div><!-- SLDS Col -->

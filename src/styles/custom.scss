@@ -1,16 +1,20 @@
 //
 // Prototype styles (using the Sass CSS preprocessor)
 //
-
+body, html{
+  background: #fff;
+}
 // Flow button element overrides
+$ele-size: 140px;
+$ele-padding: 8px;
 .flow-element{
   position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 140px; // only for demo4
-  padding: 8px;
+  width: $ele-size; // only for demo4
+  padding: $ele-padding;
   border-radius: 0.25rem;
   &.search{
     box-shadow: 0 0 0 1px #ff9a3c;
@@ -44,9 +48,12 @@
   }
 
   .text-container{
+    max-width: $ele-size - $ele-padding;
     .text-label{
-      font-weight: 700;
-      word-break: word;
+      font-size: .875rem;// $font-size-4
+      color: #3e3e3c;
+    }
+    .text-element-type{
     }
   }
 }
@@ -119,7 +126,14 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fafaf9 90%);
   }
 }
-
+.flow-element.search .fade-clamp:after{
+  background: linear-gradient(to right, rgba(255,251,205, 0) 0%, rgba(255,251,205, 1) 100%);
+}
+.overflow-method{
+  overflow: hidden;
+  word-wrap: break-word;
+  max-height: 2.5rem;
+}
 .controls{
   background:rgba(255,255,255,.8);
   width: 300px;
@@ -133,4 +147,64 @@
 }
 body.darken{
   background-color: #b1b1b1;
+}
+
+.header_utilities{
+  border-bottom: 1px solid #dddbda;
+  .slds-form-element{
+    display: inline-block;
+  }
+}
+
+//accordions demo4
+.section-animated{
+  svg{
+    transition: transform .15s ease;
+  }
+  &.slds-open svg{
+    transform: rotate(0);
+  }
+}
+
+/* -------------------
+// Resource panel
+------------------- */
+
+$panel-width: 320px;
+.slds-panel{
+  height: 100vh;
+  overflow-x: hidden;
+  .slds-panel__header{
+    transition: padding .15s ease;
+  }
+  .slds-panel__close{
+    transform: translateX(-42px);
+    transition: all .2s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.flow_resource_detail,
+.flow_resource_list{
+  width: 100%;
+  flex: none;
+  transition: margin .15s ease-in-out, opacity 1.5s ease;
+}
+.flow_resource_detail{
+  opacity: 0;
+}
+//transition state
+.show_details{
+  .slds-panel__close{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  .flow_resource_list{
+    opacity: 0;
+    margin-left: -$panel-width;
+  }
+  .flow_resource_detail{
+    opacity: 1;
+  }
 }

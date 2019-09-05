@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow Builder Left Panel</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-directional slds-is-open" aria-hidden="false">
+    <div class="slds-panel__header slds-p-left_medium slds-m-bottom_medium">
+      <h2 class="slds-text-heading_small">Resource Manager</h2>
+      <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small" tabindex="0" title="Close details Panel">
+        <svg class="slds-button__icon" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#back"></use>
+      </svg>
+      <span class="slds-assistive-text">Close Filter Panel</span>
+      </button>
+    </div>
+    <div class="slds-panel__body slds-p-around_none slds-grid">
+      <div class="flow_resource_list">
+        <ul class="slds-has-dividers_bottom-space">
+          <li class="slds-grid slds-item">
+            <span class="slds-icon_container null slds-icon__svg--default slds-p-right_small">
+              <svg class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-top" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#type_tool"></use>
+              </svg>
+            </span>
+            <span class="slds-align-middle"><a href="javascript:void(0);" tabindex="1">Variable Resource</a></span>
+            <button id="detail_one" class="slds-button slds-button_icon slds-col_bump-left" tabindex="1">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+              </svg>
+              <span class="slds-assistive-text">Provide description of action</span>
+            </button>
+          </li>
+          <li class="slds-grid slds-item">
+            <span class="slds-icon_container null slds-icon__svg--default slds-p-right_small">
+              <svg class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-top" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#type_tool"></use>
+              </svg>
+            </span>
+              <span class="slds-align-middle"><a href="javascript:void(0);" tabindex="1">Variable F name</a></span>
+            <button class="slds-button slds-button_icon slds-col_bump-left" tabindex="1">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+              </svg>
+              <span class="slds-assistive-text">Provide description of action</span>
+            </button>
+          </li>
+          <li class="slds-grid slds-item">
+            <span class="slds-icon_container null slds-icon__svg--default slds-p-right_small">
+              <svg class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-top" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#type_tool"></use>
+              </svg>
+            </span>
+              <span class="slds-align-middle"><a href="javascript:void(0);" tabindex="1">Variable L Name</a></span>
+            <button class="slds-button slds-button_icon slds-col_bump-left" tabindex="1">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+              </svg>
+              <span class="slds-assistive-text">Provide description of action</span>
+            </button>
+          </li>
+          <li class="slds-grid slds-item">
+            <span class="slds-icon_container null slds-icon__svg--default slds-p-right_small">
+              <svg class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-top" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#type_tool"></use>
+              </svg>
+            </span>
+              <span class="slds-align-middle"><a href="javascript:void(0);" tabindex="1">Variable Zip</a></span>
+            <button class="slds-button slds-button_icon slds-col_bump-left" tabindex="1">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+              </svg>
+              <span class="slds-assistive-text">Provide description of action</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- //flow resource list -->
+      <div class="flow_resource_detail slds-hide">
+        <div class="slds-text-title_caps slds-p-horizontal_medium slds-m-bottom_small">Details</div>
+
+        <ul class="slds-p-horizontal_medium slds-m-bottom_medium">
+          <li class="slds-item slds-p-vertical_xxx-small">
+            <span class="slds-form-element__label">Type:</span>
+            <span class="slds-icon_container null slds-icon__svg--default slds-align-middle">
+              <svg class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-top" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#type_tool">
+                </use>
+              </svg>
+            </span>
+            <span class="slds-text-body_regular slds-align-middle">Variable</span>
+          </li>
+          <li class="slds-item slds-p-vertical_xxx-small">
+            <span class="slds-form-element__label">Input Output Type:</span>
+            <span class="slds-text-body_regular slds-align-middle">Output Only</span>
+          </li>
+          <li class="slds-item slds-p-vertical_xxx-small">
+            <span class="slds-form-element__label">Default Value:</span>
+            <span class="slds-text-body_regular slds-align-middle">Not Provided</span>
+          </li>
+          <li class="slds-item slds-p-vertical_xxx-small">
+            <span class="slds-form-element__label">Description:</span>
+            <span class="slds-text-body_regular slds-align-middle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, maiores aperiam. Aut, beatae pariatur quasi modi veniam dignissimos iste nulla quam sequi. Amet, omnis, esse. Quo assumenda beatae quasi doloremque.</span>
+          </li>
+        </ul>
+        <footer class="slds-p-around_medium slds-border_top slds-border_bottom slds-text-align_right">
+          <button class="slds-button slds-button_neutral">Delete</button>
+          <button class="slds-button slds-button_brand">Edit</button>
+        </footer>
+      </div>
+    </div><!-- //slds-panel__body -->
+  </div> <!-- //slds-panel -->
+
+  <script src="/scripts/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>svg4everybody();</script>
+  <script>
+  $(function() {
+    var trigger = $("#detail_one");
+    var panel = $(".slds-panel");
+    var header = panel.find(".slds-panel__header");
+    var back = $(".slds-panel__close");
+    var resource_detail = $(".flow_resource_detail");
+    trigger.on("click" , function(){
+      panel.addClass("show_details");
+      header.removeClass("slds-p-left_medium").find("h2").text("Variable Resource");
+      resource_detail.removeClass("slds-hide");
+    })
+    back.on("click" , function(){
+      panel.removeClass("show_details");
+      header.addClass("slds-p-left_medium").find("h2").text("Resource Manager");
+      setTimeout(function(){
+        resource_detail.addClass("slds-hide");
+      }, 1000);
+    });
+  });
+  </script>
+</body>
+</html>
