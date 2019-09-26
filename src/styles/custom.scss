@@ -208,3 +208,19 @@ $panel-width: 320px;
     opacity: 1;
   }
 }
+/* -------------------
+// Spinner animation
+------------------- */
+@-webkit-keyframes spinner{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(359deg);
+  }
+}
+
+.slds-icon-spinner{
+  fill: #0070d2;
+  -webkit-animation: spinner 1.5s infinite linear;
+}
