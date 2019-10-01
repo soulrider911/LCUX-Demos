@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popover Demo</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="scripts/vendor/clamp.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset='utf-8'>
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Popovers Demo</h1>
+    <p class="slds-text-body--regular slds-m-bottom--large">Popover demos with different body content.</p>
+    <p class="slds-text-heading--small">Notes:</p>
+    <ul class="slds-list_dotted">
+      <li><p class="slds-text-body--regular slds-m-bottom--large">It appears that popovers have a fixed width of 20rem (320px). Maybe we should consider changing this to <strong>max-width:[...]</strong> in a effort to make the component more flexible?</p></li>
+    </ul>
+    
+    <!-- popovers demo 1-->
+    <p class="slds-text-heading--small">Example 1: Record Edit Error.</p>
+    <p class="slds-m-bottom--small">This shows in the footer when live editing record fields.</p>
+    <section aria-describedby="dialog-body-id-2" aria-labelledby="dialog-heading-id-1" class="slds-popover slds-popover_error slds-nubbin_bottom" role="dialog">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-utility-error">
+              <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error" />
+              </svg>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2 class="slds-truncate slds-text-heading_medium" id="dialog-heading-id-1" title="Resolve error">Review the following fields</h2>
+          </div>
+        </div>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-2">
+        <ul class="slds-list_dotted">
+          <li><a href="javascript:void(0);" title="Learn More">Account Name</a></li>
+          <li><a href="javascript:void(0);" title="Learn More">Phone</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- //popovers demo 1-->  
+    <br><br><br>
+    <!-- popovers demo 2-->
+    <p class="slds-text-heading--small">Example 2: Builder Rich content errors.</p>
+    <p class="slds-m-bottom--small">This shows in the header of builders when errors are present. </p>
+    <section aria-describedby="dialog-body-id-2" aria-labelledby="dialog-heading-id-1" class="slds-popover slds-popover_error slds-nubbin_top-right" role="dialog" style="width: auto; max-width: 400px;">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse" title="Close dialog">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+          <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-error">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error" />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-truncate slds-text-heading_medium" id="dialog-heading-id-1" title="Resolve error">We hit a snag...</h2>
+            </div>
+          </div>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-2">
+          <p>This page contains 3 errors, please resolve the following errors: </p>
+          <ul class="slds-list_dotted">
+            <li>Variable name "foo" already exists. </li>
+            <li>The screen "Get caller info" is not connected to another element. </li>
+            <li>List Item</li>
+          </ul>
+        </div>
+      </section>
+      <!-- //popovers demo 2-->  
+  </div>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
+  <script type="text/javascript">
+    $(function(){
+      
+    })
+  </script>
+</body>
+</html>
