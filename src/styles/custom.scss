@@ -224,3 +224,20 @@ $panel-width: 320px;
   fill: #0070d2;
   -webkit-animation: spinner 1.5s infinite linear;
 }
+/* -------------------
+// Badge Menu
+------------------- */
+button.slds-badge{
+  &:hover{
+    background: #f4f6f9;
+  }
+  &:focus{
+    background: #f4f6f9;
+    box-shadow: 0 0 3px #0070D2;
+    outline: none;
+  }
+}
+
+button.slds-button.slds-button-pill{
+  border-radius: 100px;
+}

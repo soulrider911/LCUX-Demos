@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badges as menus</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="scripts/vendor/clamp.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset='utf-8'>
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Badges as menus</h1>
+    <p class="slds-text-body--regular slds-m-bottom--large">Badges will need menu functionality for flow buiilder in order to swap outcomes on decision elements within the canvas.</p>
+    <hr>
+    <div class="slds-grid">
+      <div class="slds-col slds-size_1-of-2"> 
+        <p class="slds-text-heading--small slds-m-bottom--small">Badge as a Picklist requires hover state and focus state custom CSS for button, </p>
+        <div style="height: 14rem;">
+            <div class="slds-form-element">
+              <div class="slds-form-element__control">
+                <div class="slds-combobox_container slds-size_small">
+                  <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                      <button class="slds-badge slds-badge_lightest" aria-haspopup="true" title="Show More" style="width: fit-content;">Outcome One
+                          <span class="slds-badge__icon slds-badge__icon_right">
+                            <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-assistive-text">Show More</span>
+                        </button>
+                    <div id="listbox-unique-id" role="listbox">
+                      <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_left" role="presentation">
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center slds-is-selected" role="option">
+                            <span class="slds-media__figure">
+                              <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                              </svg>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-truncate" title="Option A">
+                                <span class="slds-assistive-text">Current Selection:</span> Outcome One</span>
+                            </span>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                            <span class="slds-media__figure">
+                              <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                              </svg>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-truncate" title="Outcome Two">Outcome Two</span>
+                            </span>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                            <span class="slds-media__figure">
+                              <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                              </svg>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-truncate" title="Outcome Three"> Outcome Three</span>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      <!-- // badge menu -->
+      </div> 
+      <div class="slds-col slds-size_1-of-2">
+        <p class="slds-text-heading--small slds-m-bottom--small">Button Neutral: requires border-radius: 100px;</p>
+        <button class="slds-button slds-button-pill slds-button_neutral">Button Neutral
+          <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- //grid -->
+  </div>
+  
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
+  <script type="text/javascript">
+    $(function(){
+      
+    })
+  </script>
+</body>
+</html>
