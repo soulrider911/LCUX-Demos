@@ -15,143 +15,70 @@
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
-  <div class="slds-p-around--large slds-container--center slds-container--large">
+  <div class="slds-p-around--large slds-container--center slds-container_x-large">
     <h1 class="slds-text-heading--large">Flowdal Cards</h1>
     <p class="slds-text-body--regular slds-m-bottom--large">Card examples for Flow Builder template picker</p>
     <hr>
     <div class="slds-grid slds-gutters slds-wrap">
-      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
-          <article class="slds-card flowdal slds-m-bottom--medium">
-              <div class="slds-card__header slds-grid">
+        {% for card in cards %}
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+            <article class="slds-card flowdal-card slds-m-bottom--medium">
+                <div class="slds-card__header slds-grid">
                 <header class="slds-media slds-has-flexi-truncate">
-                  <div class="slds-media__figure">
-                    <span class="slds-icon_container slds-icon-custom-custom67" title="custom20">
-                      <svg class="slds-icon slds-icon" aria-hidden="true">
-                        <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom20"></use>
-                      </svg>
-                      <span class="slds-assistive-text">custom20</span>
+                    <div class="slds-media__figure">
+                    <span class="slds-icon_container {{ card.color }}" title="{{ card.icon }}">
+                        <svg class="slds-icon slds-icon" aria-hidden="true">
+                        <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#{{ card.icon }}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">{{ card.icon }}</span>
                     </span>
-                  </div>
-                  <div class="slds-media__body">
+                    </div>
+                    <div class="slds-media__body">
                     <h2 class="slds-card__header-title" style="line-height:1;">
-                      <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Autolaunched">
-                        <span>Task Automation</span>
-                      </a>
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Autolaunched">
+                        <span>{{ card.name }}</span>
+                        </a>
                     </h2>
-                    <p>Beginner | Flow Basics</p>
-                  </div>
+                    <p>{{ card.type }}</p>
+                    </div>
                 </header>
-              </div>
-              <div class="slds-card__body slds-card__body_inner">
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
                 <p class="clamp-me slds-text-body_regular slds-m-bottom_xx-small">Cream cappuccino, at macchiato wings half and half cinnamon ristretto. Aged, robusta arabica flavour lungo foam kopi-luwak. Cup, white, cultivar froth blue mountain cappuccino fair trade foam affogato in ristretto aged.</p>
-                <p class="slds-text-body_regular slds-truncate">
-                    Categories: &nbsp;<a href="javascript:void(0);">Category 1</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>
+                <p class="slds-text-body_regular slds-text-body_small slds-truncate"><span class="">Categories:</span> &nbsp;<a href="javascript:void(0);">Category 1</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>
                 </p>
-              </div>
-              <footer class="slds-p-around--medium slds-p-top--none" style="text-align:left;">
-                  <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small" title="Favorite">
+                </div>
+                <footer class="slds-p-around--medium slds-card__footer" style="text-align:left;">
+                  <div class="slds-grid">
+                    <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon" title="Favorite">
                     <svg class="slds-button__icon" aria-hidden="true">
-                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
                     </svg>
                     <span class="slds-assistive-text">Favorite</span>
-                  </button>
-                  <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small" title="Add">
-                      <svg class="slds-button__icon" aria-hidden="true">
-                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                      </svg>
-                      <span class="slds-assistive-text">Favorite</span>
                     </button>
-              </footer>
-            </article>
-      </div>
-      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
-          <article class="slds-card flowdal slds-m-bottom--medium">
-              <div class="slds-card__header slds-grid">
-                <header class="slds-media slds-has-flexi-truncate">
-                  <div class="slds-media__figure">
-                    <span class="slds-icon_container slds-icon-custom-custom67" title="custom20">
-                      <svg class="slds-icon slds-icon" aria-hidden="true">
-                        <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom20"></use>
-                      </svg>
-                      <span class="slds-assistive-text">custom20</span>
-                    </span>
-                  </div>
-                  <div class="slds-media__body">
-                    <h2 class="slds-card__header-title" style="line-height:1;">
-                      <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Autolaunched">
-                        <span>Task Automation</span>
-                      </a>
-                    </h2>
-                    <p>Beginner | Flow Basics</p>
-                  </div>
-                </header>
-              </div>
-              <div class="slds-card__body slds-card__body_inner">
-                <p class="clamp-me slds-text-body_regular slds-m-bottom_xx-small">Cream cappuccino, at macchiato wings half and half cinnamon ristretto. Aged, robusta arabica flavour lungo foam kopi-luwak. Cup, white, cultivar froth blue mountain cappuccino fair trade foam affogato in ristretto aged.</p>
-                <p class="slds-text-body_regular slds-truncate">
-                    Categories: &nbsp;<a href="javascript:void(0);">Category 1</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>
-                </p>
-              </div>
-              <footer class="slds-p-around--medium slds-p-top--none" style="text-align:left;">
-                  <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small" title="Favorite">
-                    <svg class="slds-button__icon" aria-hidden="true">
-                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
-                    </svg>
-                    <span class="slds-assistive-text">Favorite</span>
-                  </button>
-                  <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small" title="Add">
-                      <svg class="slds-button__icon" aria-hidden="true">
+                    <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon" title="Add">
+                        <svg class="slds-button__icon" aria-hidden="true">
                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                      </svg>
-                      <span class="slds-assistive-text">Favorite</span>
+                        </svg>
+                        <span class="slds-assistive-text">Select</span>
                     </button>
-              </footer>
-            </article>
-      </div>
-      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
-          <article class="slds-card flowdal slds-m-bottom--medium">
-              <div class="slds-card__header slds-grid">
-                <header class="slds-media slds-has-flexi-truncate">
-                  <div class="slds-media__figure">
-                    <span class="slds-icon_container slds-icon-custom-custom67" title="custom20">
-                      <svg class="slds-icon slds-icon" aria-hidden="true">
-                        <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom20"></use>
-                      </svg>
-                      <span class="slds-assistive-text">custom20</span>
-                    </span>
+                    <div class="select-template slds-col_bump-left">
+                        <button class="slds-button slds-button_neutral slds-button_dual-stateful" aria-live="assertive">
+                          <span class="slds-text-not-pressed">
+                            <svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                            </svg>Use Template</span>
+                          <span class="slds-text-pressed">
+                            <svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                            </svg>Use Template</span>
+                        </button>
+                    </div>
                   </div>
-                  <div class="slds-media__body">
-                    <h2 class="slds-card__header-title" style="line-height:1;">
-                      <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Autolaunched">
-                        <span>Task Automation</span>
-                      </a>
-                    </h2>
-                    <p>Beginner | Flow Basics</p>
-                  </div>
-                </header>
-              </div>
-              <div class="slds-card__body slds-card__body_inner">
-                <p class="clamp-me slds-text-body_regular slds-m-bottom_xx-small">Cream cappuccino, at macchiato wings half and half cinnamon ristretto. Aged, robusta arabica flavour lungo foam kopi-luwak. Cup, white, cultivar froth blue mountain cappuccino fair trade foam affogato in ristretto aged.</p>
-                <p class="slds-text-body_regular slds-truncate">
-                    Categories: &nbsp;<a href="javascript:void(0);">Category 1</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>, <a href="javascript:void(0);">Category 2</a>
-                </p>
-              </div>
-              <footer class="slds-p-around--medium slds-p-top--none" style="text-align:left;">
-                  <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small" title="Favorite">
-                    <svg class="slds-button__icon" aria-hidden="true">
-                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
-                    </svg>
-                    <span class="slds-assistive-text">Favorite</span>
-                  </button>
-                  <button class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small" title="Add">
-                      <svg class="slds-button__icon" aria-hidden="true">
-                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                      </svg>
-                      <span class="slds-assistive-text">Favorite</span>
-                    </button>
-              </footer>
+                </footer>
             </article>
-      </div>
+        </div>
+        {% endfor %}
     </div>
     <!-- //grid -->
   </div>
@@ -166,7 +93,22 @@
     $clamp(clamp_me[0], {clamp: 2});
     $clamp(clamp_me[1], {clamp: 2});
     $clamp(clamp_me[2], {clamp: 2});
+    $clamp(clamp_me[3], {clamp: 2});
     $(function(){
+      var card = $(".flowdal-card");
+      var statefulButton = card.find(".select-template > button");
+      statefulButton.on("click" , function(){
+        var cardBtn = $(this);
+        var siblings = cardBtn.parents(".slds-col").siblings().children(".flowdal-card");
+        
+        //add selected class to card
+        cardBtn.parents(".flowdal-card").toggleClass("slds-selected");
+        //remove selected card class from siblings
+        siblings.removeClass("slds-selected");
+        //Updated selected classes to button
+        siblings.find(statefulButton).removeClass("slds-is-pressed");
+        cardBtn.toggleClass("slds-is-pressed");
+      })
     })
   </script>
 </body>

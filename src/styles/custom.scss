@@ -241,3 +241,12 @@ button.slds-badge{
 button.slds-button.slds-button-pill{
   border-radius: 100px;
 }
+
+/* -------------------
+// Flowdal Cards
+------------------- */
+.slds-card.flowdal-card{
+  &.slds-selected{
+    border: 1px solid #0070d2; //$color-border-selection;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "cards": [
+    {
+      "name": "Task Automation",
+      "type": "Intermediate | Flow Automations",
+      "icon": "entitlement_process",
+      "color":"slds-icon-standard-entitlement-process"
+    },
+    {
+      "name": "Welcome to the team Journey",
+      "type": "Beginner | Flow Onboarding",
+      "icon": "account",
+      "color":"slds-icon-standard-partner-fund-request"
+    },
+    {
+      "name": "Email Followup",
+      "type": "Beginner | Flow Basics",
+      "icon": "email",
+      "color":"slds-icon-standard-email"
+    },
+    {
+      "name": "Device Sequencing",
+      "type": "Advanced | IOT Actions",
+      "icon": "iot_context",
+      "color":"slds-icon-standard-iot-context"
+    },
+
+  ]
+}
