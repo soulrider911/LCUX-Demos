@@ -250,3 +250,18 @@ button.slds-button.slds-button-pill{
     border: 1px solid #0070d2; //$color-border-selection;
   }
 }
+.sample-grid .slds-col {
+  display: inline-flex;
+  text-align: center;
+  border-radius: 0;
+    &.slds-col > .row-container{
+      background-clip: content-box;
+      font-style: italic;
+      width:100%;
+      align-self: center;
+      border: 1px dashed #dedede;
+      padding: 0.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+}
