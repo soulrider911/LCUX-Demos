@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flowdal Cards
-  </title>
+  <title>Badge Menus</title>
   <link rel="icon" type="image/png" href="/favicon.png" />
   <script src="scripts/vendor/clamp.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -16,17 +15,17 @@
 </head>
 <body>
   <div class="slds-p-around--large slds-container--center slds-container--medium">
-    <h1 class="slds-text-heading--large">Flowdal Cards</h1>
-    <p class="slds-text-body--regular slds-m-bottom--large">Card examples for Flow Builder template picker</p>
+    <h1 class="slds-text-heading--large">Badge Menus</h1>
+    <p class="slds-text-heading--small slds-m-bottom--large">Explorations of badges as menus. Requires hover state and focus state custom CSS for button </p>
     <hr>
     <div class="slds-grid">
-      <div class="slds-col slds-size_1-of-2"> 
-        <p class="slds-text-heading--small slds-m-bottom--small">Badge as a Picklist requires hover state and focus state custom CSS for button, </p>
+      <div class="slds-col slds-size_1-of-2">
+        <p class="slds-text-heading--small slds-m-bottom--small">Badge as a Picklist</p>
         <div style="height: 14rem;">
             <div class="slds-form-element">
               <div class="slds-form-element__control">
                 <div class="slds-combobox_container slds-size_small">
-                  <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                  <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="true" aria-haspopup="listbox" role="combobox">
                       <button class="slds-badge slds-badge_lightest" aria-haspopup="true" title="Show More" style="width: fit-content;">Outcome One
                           <span class="slds-badge__icon slds-badge__icon_right">
                             <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
@@ -84,26 +83,60 @@
             </div>
         </div>
       <!-- // badge menu -->
-      </div> 
+      </div>
       <div class="slds-col slds-size_1-of-2">
-        <p class="slds-text-heading--small slds-m-bottom--small">Button Neutral: requires border-radius: 100px;</p>
-        <button class="slds-button slds-button-pill slds-button_neutral">Button Neutral
-          <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-          </svg>
-        </button>
+        <p class="slds-text-heading--small slds-m-bottom--small">Badge as a menu</p>
+        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+          <button class="slds-badge slds-badge_lightest" aria-haspopup="true" title="Show More" style="width: fit-content;">Outcome One
+
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+            </svg>
+            <span class="slds-assistive-text">Show More</span>
+          </button>
+          <div class="slds-dropdown slds-dropdown_left">
+            <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+              <li class="slds-dropdown__item slds-is-selected" role="presentation">
+                <a aria-checked="true" href="javascript:void(0);" role="menuitemcheckbox" tabindex="0">
+                  <span class="slds-truncate" title="Table View">
+                    <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                    </svg>Outcome One</span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a aria-checked="false" href="javascript:void(0);" role="menuitemcheckbox" tabindex="0">
+                  <span class="slds-truncate" title="Kanban Board">
+                    <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                    </svg>Outcome Two</span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a aria-checked="false" href="javascript:void(0);" role="menuitemcheckbox" tabindex="0">
+                  <span class="slds-truncate" title="Kanban Board">
+                    <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                    </svg>Outcome Three</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <!-- //grid -->
   </div>
-  
+
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 
   <script type="text/javascript">
     $(function(){
-      
+      $("button.slds-badge").on("click" , function(){
+        console.log($(this).parent().toggleClass("slds-is-open"));
+      })
     })
   </script>
 </body>
