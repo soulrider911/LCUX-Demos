@@ -263,5 +263,8 @@ button.slds-button.slds-button-pill{
       padding: 0.5rem;
       text-align: center;
       margin-bottom: 1rem;
+      .slds-form-element{
+        text-align: left;
+      }
     }
 }
