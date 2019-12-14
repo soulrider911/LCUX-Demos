@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click to Create Menu</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="scripts/vendor/clamp.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset='utf-8'>
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container_x-large">
+    <h1 class="slds-text-heading--large">Click to Create Menu</h1>
+    <p class="slds-text-body--regular slds-m-bottom--large">Menu and actions for Click to Create Menus.</p>
+    <hr>
+    <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
+      <svg class="slds-button__icon" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+      </svg>
+      <span class="slds-assistive-text">Show More</span>
+      <span class="target-area"></span>
+    </button>
+    <hr>
+    <!-- c2cmenu -->
+    <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu slds-is-open">
+      <button class="slds-button slds-button_icon-small slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+        </svg>
+        <span class="slds-assistive-text">Show More</span>
+        <span class="target-area"></span>
+      </button>
+      <div class="slds-dropdown">
+        <div class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+          <div class="slds-m-vertical_small">Menu Sub Heading</div>
+          <div class="slds-form-element__control">
+            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+              <input type="text" class="slds-input slds-combobox__input" id="combobox-id-3" aria-controls="listbox-id-4" autoComplete="off" role="textbox" placeholder="Select an Option" />
+              <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                </svg>
+              </span>
+            </div>  
+          </div>
+        </div>
+        <ul class="slds-dropdown__divst" role="menu" aria-label="Show More">
+          <li class="slds-dropdown__item slds-has-submenu" role="presentation" >
+            <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="0">
+              <span class="slds-media__figure slds-listbox__option-icon">
+                <span class="slds-icon_container slds-icon-standard-screen">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use>
+                  </svg>
+                </span>
+              </span>
+              <span class="slds-media__body">
+                <span class="slds-listbox__option-text slds-listbox__option-text_entity">User Interaction</span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Screens for capturing input</span>
+              </span>
+              <span class="slds-icon_container slds-icon-utility-chevronright slds-align-middle" title="Has further options">
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                </svg>
+                <span class="slds-assistive-text">Has further options</span>
+              </span>
+            </a>
+            <div class="slds-dropdown slds-dropdown_small slds-dropdown_submenu slds-dropdown_submenu-right">
+              <ul class="slds-dropdown__list" role="menu" aria-label="Menu Item Three">
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                    <span class="slds-truncate" title="Submenu Item One">Submenu Item One</span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Submenu Item Two">Submenu Item Two</span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Submenu Item Three">Submenu Item Three</span>
+                  </a>
+                </li>
+                <li class="slds-has-divider_top-space" role="separator"></li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Submenu Item Four">Submenu Item Four</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="slds-dropdown__item slds-has-submenu" role="presentation" >
+            <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="0">
+              <span class="slds-media__figure slds-listbox__option-icon">
+                <span class="slds-icon_container slds-icon-standard-screen">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use>
+                  </svg>
+                </span>
+              </span>
+              <span class="slds-media__body">
+                <span class="slds-listbox__option-text slds-listbox__option-text_entity">User Interaction</span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Screens for capturing input</span>
+              </span>
+              <span class="slds-icon_container slds-icon-utility-chevronright slds-align-middle" title="Has further options">
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                </svg>
+                <span class="slds-assistive-text">Has further options</span>
+              </span>
+            </a>
+          </li>
+          <li class="slds-dropdown__item slds-has-submenu" role="presentation" >
+            <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="0">
+              <span class="slds-media__figure slds-listbox__option-icon">
+                <span class="slds-icon_container slds-icon-standard-screen">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use>
+                  </svg>
+                </span>
+              </span>
+              <span class="slds-media__body">
+                <span class="slds-listbox__option-text slds-listbox__option-text_entity">User Interaction</span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Screens for capturing input</span>
+              </span>
+              <span class="slds-icon_container slds-icon-utility-chevronright slds-align-middle" title="Has further options">
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                </svg>
+                <span class="slds-assistive-text">Has further options</span>
+              </span>
+            </a>
+          </li>
+          <li class="slds-dropdown__item slds-has-submenu" role="presentation" >
+            <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="0">
+              <span class="slds-media__figure slds-listbox__option-icon">
+                <span class="slds-icon_container slds-icon-standard-screen">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use>
+                  </svg>
+                </span>
+              </span>
+              <span class="slds-media__body">
+                <span class="slds-listbox__option-text slds-listbox__option-text_entity">User Interaction</span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Screens for capturing input</span>
+              </span>
+              <span class="slds-icon_container slds-icon-utility-chevronright slds-align-middle" title="Has further options">
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                </svg>
+                <span class="slds-assistive-text">Has further options</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <!-- //container -->
+  </div>
+  
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
+  <script type="text/javascript">
+   
+    $(function(){
+      $(".slds-has-submenu > a").hover(function(){
+        //$(this).attr("aria-haspop" , "true");
+        console.log("over");
+      }, function(){
+        console.log("out");
+      })
+    })
+  </script>
+</body>
+</html>

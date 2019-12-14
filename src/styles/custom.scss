@@ -268,3 +268,44 @@ button.slds-button.slds-button-pill{
       }
     }
 }
+
+/* -------------------
+// C2C Menu
+------------------- */
+.slds-dropdown-trigger.c2c-menu{
+  >.slds-dropdown{
+    overflow: hidden;
+    padding-top:0;
+    width: 300px;
+    top:50%;
+    z-index: 1;
+    .slds-dropdown__header{
+      background:#FAFAFB;
+      text-align: center;
+      border-bottom: 1px solid #dddbda;
+    }
+  }
+  
+  >button{
+    border-radius: 100%;
+    z-index: 10;
+    >svg{
+      transition: transform .35s ease;
+    }
+    &:focus{
+      border-color: #0070D2;
+    }
+  }
+  &.slds-is-open{
+    > button{
+      background-color: #0070D2; //$color-brand-dark;
+      border-color: #0070D2;
+      box-shadow: 0 0 0 2px white;
+      >svg{
+        transform: rotate(135deg);
+        fill: white;
+      }
+    }
+  }
+} 
+  
