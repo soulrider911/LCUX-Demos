@@ -173,8 +173,8 @@
   <script type="text/javascript">
     $(function(){
       $("button.slds-badge").on("click" , function(){
-        console.log($(this).parent().toggleClass("slds-is-open"));
-      })
+        $(this).parent().toggleClass("slds-is-open");
+      });
     })
   </script>
 </body>
