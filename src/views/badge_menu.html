@@ -21,7 +21,7 @@
     <div class="slds-grid">
       <div class="slds-col slds-size_1-of-2">
         <p class="slds-text-heading--small slds-m-bottom--small">Badge as a Picklist</p>
-        <div style="height: 14rem;">
+        <div>
             <div class="slds-form-element">
               <div class="slds-form-element__control">
                 <div class="slds-combobox_container slds-size_small">
@@ -125,7 +125,45 @@
         </div>
       </div>
     </div>
+    <hr>
     <!-- //grid -->
+    <p class="slds-text-heading--small slds-m-bottom--small">Menu with sizing applied to result in 24px height, and 12px font size. </p>
+    <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+      <button class="slds-button slds-button_neutral slds-button_small" aria-haspopup="true" title="Show More">Outcome One
+        <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+        </svg>
+        <span class="slds-assistive-text">Show More</span>
+      </button>
+      <div class="slds-dropdown slds-dropdown_left">
+        <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+          <li class="slds-dropdown__item slds-is-selected" role="presentation">
+            <a aria-checked="true" href="javascript:void(0);" role="menuitemcheckbox" tabindex="0">
+              <span class="slds-truncate" title="Table View">
+                <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                </svg>Outcome One</span>
+            </a>
+          </li>
+          <li class="slds-dropdown__item" role="presentation">
+            <a aria-checked="false" href="javascript:void(0);" role="menuitemcheckbox" tabindex="0">
+              <span class="slds-truncate" title="Kanban Board">
+                <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                </svg>Outcome Two</span>
+            </a>
+          </li>
+          <li class="slds-dropdown__item" role="presentation">
+            <a aria-checked="false" href="javascript:void(0);" role="menuitemcheckbox" tabindex="0">
+              <span class="slds-truncate" title="Kanban Board">
+                <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                </svg>Outcome Three</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <script src="/scripts/app.js"></script>
