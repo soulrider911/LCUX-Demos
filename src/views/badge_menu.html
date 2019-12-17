@@ -126,8 +126,7 @@
       </div>
     </div>
     <hr>
-    <!-- //grid -->
-    <p class="slds-text-heading--small slds-m-bottom--small">Menu with sizing applied to result in 24px height, and 12px font size. </p>
+    <p class="slds-text-heading--small slds-m-bottom--small">Menu with CSS applied: <br> <span class="slds-text-color_weak">line-height:1.5rem, which equals 24px height, font-size:12px, padding:0 .75rem;</span> </p>
     <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
       <button class="slds-button slds-button_neutral slds-button_small" aria-haspopup="true" title="Show More">Outcome One
         <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
@@ -163,8 +162,33 @@
           </li>
         </ul>
       </div>
+     
     </div>
+    <hr>
+    <div class="slds-grid">
+      <div class="slds-col slds-size_1-of-2">
+        <p>Stabndard SLDS button today</p>
+        <button class="slds-button slds-button_neutral" aria-haspopup="true" title="Show More">Outcome One
+          <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <p>Stabndard SLDS button with sizing class applied</p>
+        <button class="slds-button slds-button_neutral slds-button_small" aria-haspopup="true" title="Show More">Outcome One
+          <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </div>
   </div>
+    <!-- //grid -->
+    
+  </div>
+
 
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
