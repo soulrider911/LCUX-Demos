@@ -285,7 +285,7 @@ button.slds-button.slds-button-pill{
       border-bottom: 1px solid #dddbda;
     }
   }
-  
+
   >button{
     border-radius: 100%;
     z-index: 10;
@@ -307,9 +307,11 @@ button.slds-button.slds-button-pill{
       }
     }
   }
-} 
+}
 .slds-button.slds-button_small{
-  line-height:1.5rem;
+  line-height:1.4rem;
   min-height: 1rem;
   padding: 0 .75rem;
+  font-size: .75rem;
+
 }
