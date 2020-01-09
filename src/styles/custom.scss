@@ -276,7 +276,8 @@ button.slds-button.slds-button-pill{
   >.slds-dropdown{
     overflow: hidden;
     padding-top:0;
-    width: 300px;
+    width: 320px;
+    max-width: none;
     top:50%;
     z-index: 1;
     >.slds-dropdown__header{
@@ -286,10 +287,14 @@ button.slds-button.slds-button-pill{
       border-bottom: 1px solid #dddbda;
     }
   }
-
+  svg.slds-icon.slds-icon_small.utility_icon{
+    padding: 4px;
+  }
   >button{
-    border-radius: 100%;
     z-index: 10;
+  }
+  >button.c2c{
+    border-radius: 100%;
     >svg{
       transition: transform .35s ease;
     }
@@ -298,7 +303,7 @@ button.slds-button.slds-button-pill{
     }
   }
   &.slds-is-open{
-    > button{
+    > button.c2c{
       background-color: #0070D2; //$color-brand-dark;
       border-color: #0070D2;
       box-shadow: 0 0 0 2px white;
@@ -316,3 +321,4 @@ button.slds-button.slds-button-pill{
   font-size: .75rem;
 
 }
+
