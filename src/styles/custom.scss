@@ -273,6 +273,13 @@ button.slds-button.slds-button-pill{
 // C2C Menu
 ------------------- */
 .slds-dropdown-trigger.c2c-menu{
+  .c2c-label{
+    opacity: 1;
+    transition: opacity .3s .1s ease;
+    p:nth-child(1){
+      font-weight: bold;
+    }
+  }
   >.slds-dropdown{
     overflow: hidden;
     padding-top:0;
@@ -280,7 +287,7 @@ button.slds-button.slds-button-pill{
     max-width: none;
     z-index: 1;
     // transition props
-    transition: all .25s ease-out;
+    transition: opacity .25s ease-out, top .25s ease-out;
     top:-15%;
     opacity: 0;
     >.slds-dropdown__header{
@@ -310,6 +317,9 @@ button.slds-button.slds-button-pill{
     .slds-dropdown{
       top:50%;
       opacity: 1;
+    }
+    .c2c-label{
+      opacity: 0;
     }
     > button.c2c{
       background-color: #0070D2; //$color-brand-dark;
