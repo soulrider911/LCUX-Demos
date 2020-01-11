@@ -23,7 +23,7 @@
     <div class="slds-grid">
       <div class="slds-col slds-size_2-of-6">
         <p class="slds-text-heading_small slds-text-align_center">Click to Create Vision</p> <br>
-        <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu c2c-element-menu slds-is-open" style="left:50%;">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu c2c-element-menu" style="left:50%;">
           <button class="slds-button slds-button_icon-small slds-button_icon-border-filled c2c" aria-haspopup="true" title="Show More">
             <svg class="slds-button__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
@@ -33,7 +33,7 @@
           </button>
           <div class="slds-dropdown">
             <div class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
-              <div class="slds-m-vertical_small slds-text-heading_small">Add Element</div>
+              <h3 class="slds-m-vertical_small slds-text-heading_small">Add Element</h3>
               <div class="slds-form-element__control">
                 <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                   <input type="text" class="slds-input slds-combobox__input" id="combobox-id-3" aria-controls="listbox-id-4" autoComplete="off" role="textbox" placeholder="Select an Option" />
@@ -161,7 +161,7 @@
       </div><!-- //col -->
       <div class="slds-col slds-size_2-of-6">
         <p class="slds-text-heading_small slds-text-align_center">Click to Create MVP</p><br>
-        <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu slds-is-open" style="left:50%;">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu" style="left:50%;">
           <button class="slds-button slds-button_icon-small slds-button_icon-border-filled c2c" aria-haspopup="true" title="Show More">
             <svg class="slds-button__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
@@ -171,7 +171,7 @@
           </button>
           <div class="slds-dropdown">
             <div class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
-              <div class="slds-m-vertical_small slds-text-heading_small">Add Element</div>
+              <h3 class="slds-m-vertical_small slds-text-heading_small">Add Element</h3>
               <div class="slds-form-element__control">
                 <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                   <input type="text" class="slds-input slds-combobox__input" id="combobox-id-3" aria-controls="listbox-id-4" autoComplete="off" role="textbox" placeholder="Select an Option" />
@@ -276,7 +276,7 @@
         
       </div><!-- //col -->
       <div class="slds-col slds-size_2-of-6"><p class="slds-text-heading_small slds-text-align_center">Element Menu</p> <br>
-        <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu slds-is-open" style="left:50%;">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger_click c2c-menu" style="left:50%;">
           <button class="slds-button" aria-haspopup="true" title="Show More">
             <span class="slds-icon_container slds-icon-standard-screen"><svg class="slds-icon slds-icon--large" aria-hidden="true"><use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use></svg></span>
             <span class="slds-assistive-text">Show More</span>
@@ -284,8 +284,8 @@
           <div class="slds-dropdown">
             <div class="slds-dropdown__header" title="Menu Sub Heading" role="separator">
                 <button class="slds-button slds-is-absolute slds-m-right_small" style="right:0;">Cancel</button>
-              <div class="slds-m-top_large">
-                <h2 class="slds-text-heading_small slds-truncate">Decision Element</h2>
+              <div class="slds-m-top_x-large">
+                <h3 class="slds-text-heading_small slds-truncate">Decision Element</h3>
                 <p class="slds-text-body_regular slds-truncate">Define where to route the user, after they order pizza</p>
               </div>
             </div>
@@ -316,19 +316,29 @@
     </div><!-- //grid -->
   </div><!-- //container -->
   
-  <script src="/scripts/app.js"></script>
+  <!-- <script src="/scripts/app.js"></script> -->
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 
   <script type="text/javascript">
    
     $(function(){
-      $(".slds-has-submenu > a").hover(function(){
-        //$(this).attr("aria-haspop" , "true");
-        console.log("over");
-      }, function(){
-        console.log("out");
+    
+      $(".slds-dropdown-trigger > button").on("click" , function(event){
+        var menu = $(this).parent();
+        if( menu.is(".c2c-open") ){
+          menu.removeClass("c2c-open")
+          setTimeout(function(){
+            menu.removeClass("slds-is-open")
+          },500)
+        }else{
+          menu.addClass("slds-is-open")
+          setTimeout(function(){
+            menu.addClass("c2c-open")    
+          },10)
+        }
       })
+      event.stopPropagation();
     })
   </script>
 </body>

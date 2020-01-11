@@ -276,10 +276,13 @@ button.slds-button.slds-button-pill{
   >.slds-dropdown{
     overflow: hidden;
     padding-top:0;
-    width: 320px;
+    width: 300px;
     max-width: none;
-    top:50%;
     z-index: 1;
+    // transition props
+    transition: all .25s ease-out;
+    top:-15%;
+    opacity: 0;
     >.slds-dropdown__header{
       font-weight: normal;
       background:#FAFAFB;
@@ -302,7 +305,12 @@ button.slds-button.slds-button-pill{
       border-color: #0070D2;
     }
   }
-  &.slds-is-open{
+  // When menu is open
+  &.c2c-open{
+    .slds-dropdown{
+      top:50%;
+      opacity: 1;
+    }
     > button.c2c{
       background-color: #0070D2; //$color-brand-dark;
       border-color: #0070D2;
@@ -314,6 +322,7 @@ button.slds-button.slds-button-pill{
     }
   }
 }
+
 .slds-button.slds-button_small{
   line-height:1.4rem;
   min-height: 1rem;
