@@ -169,7 +169,6 @@ body.darken{
 /* -------------------
 // Resource panel
 ------------------- */
-
 $panel-width: 320px;
 .slds-panel{
   height: 100vh;
@@ -177,7 +176,7 @@ $panel-width: 320px;
   .slds-panel__header{
     transition: padding .15s ease;
   }
-  .slds-panel__close{
+  &.resource_panel .slds-panel__close{
     transform: translateX(-42px);
     transition: all .2s ease;
     opacity: 0;
@@ -195,7 +194,7 @@ $panel-width: 320px;
 }
 //transition state
 .show_details{
-  .slds-panel__close{
+  &.resource_panel .slds-panel__close{
     transform: translateX(0px);
     opacity: 1;
     visibility: visible;
@@ -206,6 +205,15 @@ $panel-width: 320px;
   }
   .flow_resource_detail{
     opacity: 1;
+  }
+}
+/* -------------------
+// Panel Toggling
+------------------- */
+.slds-panel{
+  transition: all .25s ease-in-out;
+  &.is_docked{
+    transform: translateX(-325px);
   }
 }
 /* -------------------
@@ -340,4 +348,3 @@ button.slds-button.slds-button-pill{
   font-size: .75rem;
 
 }
-

@@ -41,20 +41,6 @@
       </div>
       <nav class="slds-builder-header__item slds-builder-header__nav">
         <ul class="slds-builder-header__nav-list">
-          <!-- <li class="slds-builder-header__nav-item">
-            <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
-              <span class="slds-media__figure">
-                <span class="slds-icon_container slds-icon-utility-settings slds-current-color">
-                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings" />
-                  </svg>
-                </span>
-              </span>
-              <span class="slds-media__body">
-                <span class="slds-truncate" title="Link">Link</span>
-              </span>
-            </a>
-          </li> -->
           <li class="slds-builder-header__nav-item">
             <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
               <span class="slds-icon_container slds-icon-utility-settings slds-current-color">
@@ -64,13 +50,6 @@
               </span>
             </a>
             <button class="slds-button slds-builder-header__item-action slds-media slds-media_center slds-p-left_none" aria-haspopup="true" title="Click to open menu">
-              <!-- <span class="slds-media__figure">
-                <span class="slds-icon_container slds-icon-utility-page slds-current-color">
-                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings" />
-                  </svg>
-                </span>
-              </span> -->
               <span class="slds-media__body">
                 <span class="slds-truncate" title="Dropdown">Pages Menu</span>
                 <span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
@@ -83,9 +62,7 @@
           </li>
         </ul>
       </nav>
-      <div class="slds-builder-header__item">
-        <!-- <h1 class="slds-builder-header__item-label">Page Type</h1> -->
-      </div>
+      <div class="slds-builder-header__item"> <!--additional items --> </div>
       <div class="slds-builder-header__item slds-builder-header__utilities">
 
         <!-- help menu -->
@@ -180,6 +157,12 @@
             </svg>
           </button>
         </div>
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled panel_toggle" aria-pressed="false" title="toggle panel">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_left"></use>
+          </svg>
+          <span class="slds-assistive-text">Like</span>
+        </button>
       </div>
       <!-- //left utilities-->
       <!-- right utilities -->
@@ -254,8 +237,22 @@
         <button class="slds-button slds-button_brand">Save</button>
       </div>
       <!-- //Right utilities-->
+      </div>
     </div>
-
+  </div>
+  <!-- left panel -->
+  <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open is_docked" aria-hidden="false">
+    <div class="slds-panel__header">
+      <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Panel Header</h2>
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close" title="Collapse Panel Header">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+        </svg>
+        <span class="slds-assistive-text">Collapse Panel Header</span>
+      </button>
+    </div>
+    <div class="slds-panel__body">A panel body accepts any layout or component</div>
+  </div>
     <!-- Keyboard shortcuts modal -->
       <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_medium" id="keyboard-shortcuts">
         <div class="slds-modal__container">
@@ -410,6 +407,15 @@
       $(".slds-modal__close").on("click" , function(){
         $("#keyboard-shortcuts").removeClass("slds-fade-in-open").next().removeClass("slds-fade-in-open");
       });
+      //toggle_panel_left
+      $(".panel_toggle").on("click" , function(){
+        $(this).toggleClass("slds-is-selected");
+        $(".slds-panel").toggleClass("is_docked");
+      });
+      $(".slds-panel__close").on("click" , function(){
+        $(".slds-panel").toggleClass("is_docked");
+        $(".panel_toggle").toggleClass("slds-is-selected");
+      })
     });
   </script>
 </body>
