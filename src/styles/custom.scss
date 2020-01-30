@@ -211,7 +211,9 @@ $panel-width: 320px;
 // Panel Toggling
 ------------------- */
 .slds-panel{
-  transition: all .25s ease-in-out;
+  transition-property: transform;
+  //transition-timing-function: ease-in-out;
+  transition-duration: .25s;
   &.is_docked{
     transform: translateX(-325px);
   }

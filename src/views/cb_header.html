@@ -126,7 +126,7 @@
       </div>
       <!-- //Help Menu -->
     </header>
-    <div class="header_utilities slds-p-horizontal_medium slds-p-vertical_x-small slds-grid">
+    <div class="header_utilities slds-p-horizontal_medium slds-p-vertical_x-small slds-grid" style="background: white;">
       <div class="slds-col slds-col_bump-left">
         <button class="slds-button slds-button_icon slds-button_icon-border-filled">
           <svg class="slds-button__icon" aria-hidden="true">
@@ -240,8 +240,9 @@
       </div>
     </div>
   </div>
+</div>
   <!-- left panel -->
-  <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open is_docked" aria-hidden="false">
+  <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open is_docked" aria-hidden="false" style="top:99px; transition-timing-function: ease-in-out; transition-duration:.25s">
     <div class="slds-panel__header">
       <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Panel Header</h2>
       <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close" title="Collapse Panel Header">
@@ -253,125 +254,155 @@
     </div>
     <div class="slds-panel__body">A panel body accepts any layout or component</div>
   </div>
-    <!-- Keyboard shortcuts modal -->
-      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_medium" id="keyboard-shortcuts">
-        <div class="slds-modal__container">
-          <header class="slds-modal__header">
-            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
-              <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
-              </svg>
-              <span class="slds-assistive-text">Close</span>
-            </button>
-            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Keyboard Shortcuts</h2>
-          </header>
-          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-            <p>If your using an Apple Mac replace the CTRL key with ⌘ key. </p>
-            <div class="slds-grid slds-gutters slds-wrap">
-              <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
-              <div class="slds-section slds-is-open">
-                  <h3 class="slds-section__title slds-theme_shade">
-                    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">General</span>
-                  </h3>
-                  <div aria-hidden="false" class="slds-section__content">
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Keyboard help</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">?(Shift+/)</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Switch panel focus</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+F6</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Undo</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+Z</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-p-left_small">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Redo</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+SHIFT+Z</dd>
-                    </dl>
-                </div>
-              </div>
-              <!-- //section -->
-              <div class="slds-section slds-is-open">
-                  <h3 class="slds-section__title slds-theme_shade">
-                    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Canvas</span>
-                  </h3>
-                  <div aria-hidden="false" class="slds-section__content">
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom in</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom out</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL–</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom to fit</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+0</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom to 100%</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+1</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap  slds-p-left_small">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Pan</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">Spacebar+ mouse click and drag</dd>
-                    </dl>
-                </div>
-              </div>
-              <!-- //section -->
-
-              </div>
-              <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
-              <div class="slds-section slds-is-open">
-                  <h3 class="slds-section__title slds-theme_shade">
-                    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Copy and Paste</span>
-                  </h3>
-                  <div aria-hidden="false" class="slds-section__content">
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Cut</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+X</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Copy</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+C</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-p-left_small">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Paste</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+V</dd>
-                    </dl>
-                </div>
-              </div>
-              <!-- //section -->
-              <div class="slds-section slds-is-open">
-                  <h3 class="slds-section__title slds-theme_shade">
-                    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Saving</span>
-                  </h3>
-                  <div aria-hidden="false" class="slds-section__content">
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Save</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+S</dd>
-                    </dl>
-                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
-                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Save As</dt>
-                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+SHIFT+S</dd>
-                    </dl>
-                </div>
-              </div>
-              <!-- //section -->
-              </div>
+  <!-- Keyboard shortcuts modal -->
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_medium slds-hide" id="keyboard-shortcuts">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Keyboard Shortcuts</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <p>If your using an Apple Mac replace the CTRL key with ⌘ key. </p>
+        <div class="slds-grid slds-gutters slds-wrap">
+          <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+          <div class="slds-section slds-is-open">
+              <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">General</span>
+              </h3>
+              <div aria-hidden="false" class="slds-section__content">
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Keyboard help</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">?(Shift+/)</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Switch panel focus</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+F6</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Undo</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+Z</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-p-left_small">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Redo</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+SHIFT+Z</dd>
+                </dl>
             </div>
           </div>
-          <footer class="slds-modal__footer">
-            <div class="slds-truncate slds-float_right" data-aura-rendered-by="4:1021;a"><a href="">Learn More</a></div>
-            <div class="slds-truncate slds-float_left" data-aura-rendered-by="4:1021;a">⇧ Shift |⌘ Command</div>
-          </footer>
-        </div>
-      </section>
-      <div class="slds-backdrop"></div>
-    <!-- //Keyboard shortcuts modal -->
+          <!-- //section -->
+          <div class="slds-section slds-is-open">
+              <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Canvas</span>
+              </h3>
+              <div aria-hidden="false" class="slds-section__content">
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom in</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom out</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL–</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom to fit</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+0</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Zoom to 100%</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+1</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap  slds-p-left_small">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Pan</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">Spacebar+ mouse click and drag</dd>
+                </dl>
+            </div>
+          </div>
+          <!-- //section -->
 
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+          <div class="slds-section slds-is-open">
+              <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Copy and Paste</span>
+              </h3>
+              <div aria-hidden="false" class="slds-section__content">
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Cut</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+X</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Copy</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+C</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-p-left_small">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Paste</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+V</dd>
+                </dl>
+            </div>
+          </div>
+          <!-- //section -->
+          <div class="slds-section slds-is-open">
+              <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Saving</span>
+              </h3>
+              <div aria-hidden="false" class="slds-section__content">
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Save</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+S</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Save As</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+SHIFT+S</dd>
+                </dl>
+            </div>
+          </div>
+          <!-- //section -->
+          </div>
+        </div>
+      </div>
+      <footer class="slds-modal__footer">
+        <div class="slds-truncate slds-float_right" data-aura-rendered-by="4:1021;a"><a href="">Learn More</a></div>
+        <div class="slds-truncate slds-float_left" data-aura-rendered-by="4:1021;a">⇧ Shift |⌘ Command</div>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop"></div>
+  <!-- //Keyboard shortcuts modal -->
+  <div class="controls slds-border" style="left: 350px; top: 140px;">
+    <h1 class="slds-text-heading--small">⏩ Change panel easing</h1>
+    <div class="slds-form-element easing">
+      <label class="slds-form-element__label" for="select-01">Esing Property</label>
+      <div class="slds-form-element__control">
+        <div class="slds-select_container">
+          <select class="slds-select" id="select-01">
+            <option value="ease-in-out" selected="selected">Ease In Out</option>
+            <option value="cubic-bezier(0.455, 0.030, 0.515, 0.955)">Ease In Out Quad</option>
+            <option value="cubic-bezier(0.645, 0.045, 0.355, 1.000)">Ease In Out Cubic</option>
+            <option value="cubic-bezier(0.770, 0.000, 0.175, 1.000)">Ease In Out Quart</option>
+            <option value="ease-out">Ease Out</option>
+            <option value="ease-in">Ease In</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="slds-form-element timing">
+      <label class="slds-form-element__label" for="select-01">Timing</label>
+      <div class="slds-form-element__control">
+        <div class="slds-select_container">
+          <select class="slds-select" id="select-01">
+            <option value=".25s" selected="selected">.25 Seconds</option>
+            <option value=".5s">.5 Seconds</option>
+            <option value=".75s">.75 Seconds</option>
+            <option value="1s">1 Second</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div> <!-- display controls -->
   <script src="/scripts/app.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
@@ -380,6 +411,7 @@
     $(function(){
       var tooltip = $("[aria-hastooltip='true']");
       var popover = $("[aria-haspopover='true']");
+      var panel = $(".slds-panel");
       tooltip.hover(function(){
         $(this).next().removeClass("slds-hidden");
       },function(){
@@ -401,20 +433,29 @@
         var hash = $(this).attr("aria-hasmodal");
         //$(hash).addClass("slds-fade-in-open");
         console.log($("."+hash));
-        $("#"+hash).addClass("slds-fade-in-open").next().addClass("slds-fade-in-open");
+        $("#"+hash).addClass("slds-fade-in-open").removeClass("slds-hide").next().addClass("slds-fade-in-open");
       });
 
       $(".slds-modal__close").on("click" , function(){
-        $("#keyboard-shortcuts").removeClass("slds-fade-in-open").next().removeClass("slds-fade-in-open");
+        $("#keyboard-shortcuts").removeClass("slds-fade-in-open").addClass("slds-hide").next().removeClass("slds-fade-in-open");
       });
       //toggle_panel_left
       $(".panel_toggle").on("click" , function(){
         $(this).toggleClass("slds-is-selected");
-        $(".slds-panel").toggleClass("is_docked");
+        panel.toggleClass("is_docked");
       });
       $(".slds-panel__close").on("click" , function(){
-        $(".slds-panel").toggleClass("is_docked");
+        panel.toggleClass("is_docked");
         $(".panel_toggle").toggleClass("slds-is-selected");
+      });
+      //controls
+      $('.easing select').on("change" , function(){
+        var val = this.value;
+        panel.css({"transition-timing-function" : val});
+      })
+      $('.timing select').on("change" , function(){
+        var val = this.value;
+        panel.css({"transition-duration" : val});
       })
     });
   </script>
