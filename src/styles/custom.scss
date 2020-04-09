@@ -350,3 +350,26 @@ button.slds-button.slds-button-pill{
   font-size: .75rem;
 
 }
+.flow-ele{
+  border: 2px solid white;
+  transition: all .15s ease;
+  &:hover,
+  &:focus,
+  &.seleceted{
+    transform: scale(1.1);
+  }
+  &:focus{
+    box-shadow: 0 0 3px #0070d2;
+  }
+  &.selected{
+    box-shadow: 0 0 0 2px #0070d2;
+  }
+  &.selected:focus{
+    box-shadow: 0 0 0 2px #0070d2, 0 0 3px 2px #0070d2;
+  }
+}
+.slds-section.selected {
+  .slds-section__title{
+    box-shadow: 0 0 0 1px #0070d2;
+  }
+}
