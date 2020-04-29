@@ -373,3 +373,18 @@ button.slds-button.slds-button-pill{
     box-shadow: 0 0 0 1px #0070d2;
   }
 }
+.stub{
+  font-style: italic;
+  display: inline-block;
+  max-width: 150px;
+  position: relative;
+  padding-right: 15px;
+  color: #844800; //$color-text-warning-alt;
+  color: #c23934; //$color-text-destructive
+  &::after{
+    // display: inline-block;
+    content: "\2192";
+    position: absolute;
+    right: 0px;
+  }
+}
