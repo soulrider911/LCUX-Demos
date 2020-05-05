@@ -234,23 +234,6 @@ $panel-width: 320px;
   fill: #0070d2;
   -webkit-animation: spinner 1.5s infinite linear;
 }
-/* -------------------
-// Badge Menu
-------------------- */
-button.slds-badge{
-  &:hover{
-    background: #f4f6f9;
-  }
-  &:focus{
-    background: #f4f6f9;
-    box-shadow: 0 0 3px #0070D2;
-    outline: none;
-  }
-}
-
-button.slds-button.slds-button-pill{
-  border-radius: 100px;
-}
 
 /* -------------------
 // Flowdal Cards
@@ -382,9 +365,33 @@ button.slds-button.slds-button-pill{
   color: #844800; //$color-text-warning-alt;
   color: #c23934; //$color-text-destructive
   &::after{
-    // display: inline-block;
     content: "\2192";
     position: absolute;
     right: 0px;
+  }
+}
+
+/* -------------------
+// Sections no Preview
+------------------- */
+.no-preview{
+  margin: .5rem 0 .5rem 0;
+  >div{
+    display: flex;
+  }
+}
+.slds-size_1-of-12{
+  .no-preview{
+    >span{
+    }
+    svg{
+      width: 1rem;
+      height: 1rem;
+      line-height: 1;
+    }
+    .slds-text-heading_small, 
+    .slds-text-body_small{
+      display: none;
+    }
   }
 }
