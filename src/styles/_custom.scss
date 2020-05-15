@@ -1,6 +1,7 @@
 //
 // Prototype styles (using the Sass CSS preprocessor)
 //
+
 body, html{
   background: #fff;
 }
@@ -353,7 +354,7 @@ $panel-width: 320px;
 }
 .slds-section.selected {
   .slds-section__title{
-    box-shadow: 0 0 0 1px #0070d2;
+    box-shadow: 0 0 0 1px $color-brand-dark;
   }
 }
 .stub{
@@ -362,8 +363,8 @@ $panel-width: 320px;
   max-width: 150px;
   position: relative;
   padding-right: 15px;
-  color: #844800; //$color-text-warning-alt;
-  color: #c23934; //$color-text-destructive
+  color: $color-text-warning-alt;
+  //color: #c23934; //$color-text-destructive
   &::after{
     content: "\2192";
     position: absolute;
