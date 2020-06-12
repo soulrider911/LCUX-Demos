@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
-  <div class="demo-only" >
-    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="" aria-describedby="welcome-mat-95-content" aria-modal="true">
+  <div class="demo-only" ></div>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="" aria-describedby="welcome-mat-95-content" aria-modal="true">
       <div class="slds-modal__container">
         <header class="slds-modal__header slds-modal__header_empty">
           <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
@@ -27,11 +27,11 @@
         </header>
         <div class="slds-modal__content">
           <div class="slds-welcome-mat slds-welcome-mat_splash">
-            <div class="slds-welcome-mat__content slds-grid">
-              <div class="slds-welcome-mat__info slds-size_1-of-1">
+            <div class="slds-welcome-mat__content">
+              <div class="slds-welcome-mat__info">
                 <div class="slds-welcome-mat__info-content">
                   <h2 class="slds-welcome-mat__info-title" id="">How would you like to start building?</h2>
-                  <div class="slds-welcome-mat__info-description slds-text-longform">
+                  <div class="slds-welcome-mat__info-description">
                     <!-- grid -->
                     <div class="slds-grid slds-gutters">
                       <div class="slds-col slds-size_1-of-2">
@@ -40,14 +40,72 @@
                           <div class="slds-card__header slds-grid">
                             <header class="slds-media slds-media_center slds-has-flexi-truncate">
                               <div class="slds-media__body">
-                                <h2 class="slds-card__header-title">Freeform</h2>
+                                <h2 class="slds-card__header-title"><strong>Freeform</strong></h2>
                               </div>
                             </header>
                           </div>
                           <div class="slds-card__body slds-card__body_inner">
-                            <img style="max-width:150px;" src="../assets/freeform_wireframe_welcome.png" alt="auolayout image">
+                            <img src="../assets/freeform_wireframe_welcome.png" alt="auolayout image">
                             <br>
-                            <p class="slds-m-top_small">Canvas organization is more manual, component connections are manual.</p>
+                            <p class="slds-m-top_small slds-m-bottom_small "><strong>Drag components to the canvas. Component connections and placement is manual.</strong></p>
+                            <ul class="slds-text-align_left slds-m-bottom_small">
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Components allow multiple inputs
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Bulk copy and paste
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Components can overlap
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Supported Feature</span>
+                                </span>Draggable components
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-error slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Automatic component placement
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-error slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Unsupported Feature</span>
+                                  </span>Automatic connectors
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-error slds-m-right_xx-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Unsupported Feature</span>
+                                </span>Keyboard Navigable
+                              </li>
+                            </ul>
                           </div>
                           <footer class="slds-card__footer">
                             <a class="slds-card__footer-action" href="javascript:void(0);">Start In Freeform
@@ -63,21 +121,71 @@
                           <div class="slds-card__header slds-grid">
                             <header class="slds-media slds-media_center slds-has-flexi-truncate">
                               <div class="slds-media__body">
-                                <h2 class="slds-card__header-title">Autolayout</h2>
+                                <h2 class="slds-card__header-title"><strong>Autolayout</strong> <span class="slds-badge slds-theme_warning">Beta</span></h2>
                               </div>
                             </header>
                           </div>
                           <div class="slds-card__body slds-card__body_inner">
-                            <img style="max-width:150px;" src="../assets/autolayout_wireframe_welcome.png" alt="auolayout image">
+                            <img src="../assets/autolayout_wireframe_welcome.png" alt="auolayout image">
                             <br>
-                            <p class="slds-m-top_small slds-m-bottom_small ">Canvas organization is automatic, component connections are automagic.</p>
-                      
-                            <ul class="slds-text-align_left slds-has-block-links_space">
-                              <li>Fixed components on the canvas</li>
-                              <li>Components can not overlap</li>
-                              <li>Canvas organazies connectors and elements</li>
-                              <li>Click to add components directly in canvas</li>
-                              <li>Components do not support multiple incoming connectors</li>
+                            <p class="slds-m-top_small slds-m-bottom_small "><strong>Add components directly in the canvas. Component connections and placement is automatic.</strong></p>
+                            <ul class="slds-text-align_left slds-m-bottom_small">
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Supported Feature</span>
+                                </span>Keyboard Navigable
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Automatic component placement
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Automatic connectors
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-success slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Supported Feature</span>
+                                  </span>Bulk copy and paste
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-error slds-m-right_xx-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Unsupported Feature</span>
+                                </span>Draggable components
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-error slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Unsupported Feature</span>
+                                  </span>Components can overlap
+                              </li>
+                              <li class="slds-item">
+                                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-icon-text-error slds-m-right_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Unsupported Feature</span>
+                                  </span>Components allow multiple inputs
+                              </li>
                             </ul>
                           </div>
                           <footer class="slds-card__footer">
@@ -114,7 +222,6 @@
       </div>
     </section>
     <div class="slds-backdrop slds-backdrop_open"></div>
-  </div>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>

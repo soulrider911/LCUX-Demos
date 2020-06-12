@@ -400,3 +400,11 @@ $panel-width: 320px;
 /* -------------------
 // Welcome Mat
 ------------------- */
+.slds-welcome-mat__info-description .slds-card{
+  img{
+    max-width: 142px;
+  }
+  ul{
+    font-size: $font-size-2;
+  }
+}
