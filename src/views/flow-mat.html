@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flow Welcome Mat
+  </title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset='utf-8'>
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="demo-only" >
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="" aria-describedby="welcome-mat-95-content" aria-modal="true">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header slds-modal__header_empty">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+        </header>
+        <div class="slds-modal__content">
+          <div class="slds-welcome-mat slds-welcome-mat_splash">
+            <div class="slds-welcome-mat__content slds-grid">
+              <div class="slds-welcome-mat__info slds-size_1-of-1">
+                <div class="slds-welcome-mat__info-content">
+                  <h2 class="slds-welcome-mat__info-title" id="">How would you like to start building?</h2>
+                  <div class="slds-welcome-mat__info-description slds-text-longform">
+                    <!-- grid -->
+                    <div class="slds-grid slds-gutters">
+                      <div class="slds-col slds-size_1-of-2">
+                        <!-- Card -->
+                        <article class="slds-card">
+                          <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                              <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">Freeform</h2>
+                              </div>
+                            </header>
+                          </div>
+                          <div class="slds-card__body slds-card__body_inner">
+                            <img style="max-width:150px;" src="../assets/freeform_wireframe_welcome.png" alt="auolayout image">
+                            <br>
+                            <p class="slds-m-top_small">Canvas organization is more manual, component connections are manual.</p>
+                          </div>
+                          <footer class="slds-card__footer">
+                            <a class="slds-card__footer-action" href="javascript:void(0);">Start In Freeform
+                              <span class="slds-assistive-text">Start In Freeform</span>
+                            </a>
+                          </footer>
+                        </article>
+                        <!-- //Card -->    
+                      </div>
+                      <div class="slds-col slds-size_1-of-2">
+                        <!-- Card -->
+                        <article class="slds-card">
+                          <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                              <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">Autolayout</h2>
+                              </div>
+                            </header>
+                          </div>
+                          <div class="slds-card__body slds-card__body_inner">
+                            <img style="max-width:150px;" src="../assets/autolayout_wireframe_welcome.png" alt="auolayout image">
+                            <br>
+                            <p class="slds-m-top_small slds-m-bottom_small ">Canvas organization is automatic, component connections are automagic.</p>
+                      
+                            <ul class="slds-text-align_left slds-has-block-links_space">
+                              <li>Fixed components on the canvas</li>
+                              <li>Components can not overlap</li>
+                              <li>Canvas organazies connectors and elements</li>
+                              <li>Click to add components directly in canvas</li>
+                              <li>Components do not support multiple incoming connectors</li>
+                            </ul>
+                          </div>
+                          <footer class="slds-card__footer">
+                            <a class="slds-card__footer-action" href="javascript:void(0);">Start In Autolayout
+                              <span class="slds-assistive-text">Start In Autolayout</span>
+                            </a>
+                          </footer>
+                        </article>
+                        <!-- //Card -->  
+                      </div>
+                    </div>
+                    <!-- //grid -->
+                  </div>
+                  <div class="slds-welcome-mat__info-actions">
+                    <div class="slds-m-top_large">
+                      <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                          <div class="slds-checkbox">
+                            <input type="checkbox" name="options" id="checkbox-8" value="checkbox-8" />
+                            <label class="slds-checkbox__label" for="checkbox-8">
+                              <span class="slds-checkbox_faux"></span>
+                              <span class="slds-form-element__label">Don&#x27;t show this again</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </div>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
+  <script type="text/javascript">
+    $(function(){
+      
+    })
+  </script>
+</body>
+</html>
