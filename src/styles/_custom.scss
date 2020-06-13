@@ -400,11 +400,19 @@ $panel-width: 320px;
 /* -------------------
 // Welcome Mat
 ------------------- */
-.slds-welcome-mat__info-description .slds-card{
-  img{
-    max-width: 142px;
-  }
-  ul{
-    font-size: $font-size-2;
-  }
+.slds-welcome-mat_splash .slds-welcome-mat__content{
+  height: auto;
 }
+.slds-welcome-mat__info-description{
+  .slds-card{
+    .slds-card__header-title{
+      line-height: $line-height-tab;
+    }
+    img{
+      max-width: 142px;
+    }
+    ul{
+      font-size: $font-size-2;
+    }
+  }
+} 
