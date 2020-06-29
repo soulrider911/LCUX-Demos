@@ -131,20 +131,69 @@
         </div>
       </div> <!-- section -->
     </div> <!-- SLDS Col -->
+    <hr>
+    <ul class="slds-accordion">
+      <li class="slds-accordion__list-item">
+        <section class="slds-accordion__section slds-is-open">
+          <div class="slds-accordion__summary">
+            <h3 class="slds-accordion__summary-heading slds-grid slds-grid_vertical-align-center">              
+                <div class="slds-col">
+                  
+                  <button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action" style="vertical-align: middle;">
+                    <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Accordion Toggle</span>
+                  </button>
+
+                  <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Description of icon when needed</span>
+                  </span>
+
+                  <button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-m-left_xx-small">
+                    <span class="slds-truncate" title="Flow Component">Flow Component</span>
+                  </button>
+                </div>
+                <div class="slds-col_bump-left">
+                  <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                    <svg class="slds-icon slds-icon-text-default slds-icon_x-small slds-icon-text-error" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Description of icon when needed</span>
+                  </span>
+                  <button class="slds-button slds-button_icon" title="Search">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                    </svg>
+                </div>
+            </h3>
+          </div>
+          <div class="slds-accordion__content" id="accordion-details-01">Accordion details - A Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reprehenderit sunt atque placeat, tempora facilis nemo rem minus, nisi deserunt, odit unde. Veniam officiis beatae, doloremque tempora magni quibusdam nisi?</div>
+        </section>
+      </li>
+    </ul>  
   </div> <!-- SLDS Grid -->
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 
   <script type="text/javascript">
+    var accord =$(".slds-accordion");
 
     var section = $(".section-one");
     var section_animated = $(".section-animated");
     var checkbox = $(".section-animated .show-more");
 
+    accord.find(".slds-accordion__summary-action").on("click" , function(){
+      $(this).parents().closest(".slds-accordion__section").toggleClass("slds-is-open");
+      console.log($(this).parents().closest(".slds-accordion__section"))
+    });
+    
     section.find("button").on("click" , function(){
       $(this).parent().parent().toggleClass("slds-is-open");
-      console.log("click")
     });
 
     section_animated.find("button").on("click" , function(){
