@@ -416,3 +416,17 @@ $panel-width: 320px;
     }
   }
 } 
+/* -------------------
+// Debug Accordion
+------------------- */
+.slds-panel{
+  transition: width .25s ease;
+  .slds-grid{
+    flex-direction: column;
+  }
+  &.slds-size_x-large{
+    .slds-grid{
+      flex-direction: row;
+    }
+  }
+}

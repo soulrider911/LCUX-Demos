@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exression</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset='utf-8'>
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Responsive Expression Demo</h1>
+    <p class="slds-text-body--regular slds-m-bottom--large">Experiment with Expressions in a panel that can be sized to large or small</p>
+    <hr>
+  </div>
+  
+
+  <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false" style="position: fixed; right:0; top:0; bottom:0;">
+    <div class="slds-panel__header">
+      <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Panel Header</h2>
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close" id="panel_expand" title="Expand Panel">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#expand"></use>
+        </svg>
+        <span class="slds-assistive-text">Collapse Panel Header</span>
+      </button>
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close" id="panel_close" title="Collapse Panel Header">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+        </svg>
+        <span class="slds-assistive-text">Collapse Panel Header</span>
+      </button>
+    </div>
+    <div class="slds-panel__body">
+    <!-- panel body   -->
+    <div class="slds-expression">
+      <h2 class="slds-expression__title">Conditions</h2>
+      <div class="slds-expression__options">
+        <div class="slds-form-element">
+          <label class="slds-form-element__label" for="combobox-id-154">Take Action When</label>
+          <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                  <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="combobox-id-154" aria-controls="listbox-id-148" autoComplete="off" role="textbox" placeholder="Select an Option" readonly="" value="All Conditions Are Met"
+                  />
+                  <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div id="listbox-id-148" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid" role="listbox">
+                  <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                    <li role="presentation" class="slds-listbox__item">
+                      <div aria-selected="true" id="listbox-option-id-644" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected slds-has-focus" role="option">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                          <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                            <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                            </svg>
+                          </span>
+                        </span>
+                        <span class="slds-media__body">
+                          <span class="slds-truncate" title="All Conditions Are Met">
+                            <span class="slds-assistive-text">Current Selection:</span> All Conditions Are Met</span>
+                        </span>
+                      </div>
+                    </li>
+                    <li role="presentation" class="slds-listbox__item">
+                      <div id="listbox-option-id-645" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                        <span class="slds-media__figure slds-listbox__option-icon"></span>
+                        <span class="slds-media__body">
+                          <span class="slds-truncate" title="Any Condition Is Met"> Any Condition Is Met</span>
+                        </span>
+                      </div>
+                    </li>
+                    <li role="presentation" class="slds-listbox__item">
+                      <div id="listbox-option-id-646" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                        <span class="slds-media__figure slds-listbox__option-icon"></span>
+                        <span class="slds-media__body">
+                          <span class="slds-truncate" title="Custom Logic Is Met"> Custom Logic Is Met</span>
+                        </span>
+                      </div>
+                    </li>
+                    <li role="presentation" class="slds-listbox__item">
+                      <div id="listbox-option-id-647" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                        <span class="slds-media__figure slds-listbox__option-icon"></span>
+                        <span class="slds-media__body">
+                          <span class="slds-truncate" title="Always (No Criteria)"> Always (No Criteria)</span>
+                        </span>
+                      </div>
+                    </li>
+                    <li role="presentation" class="slds-listbox__item">
+                      <div id="listbox-option-id-648" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                        <span class="slds-media__figure slds-listbox__option-icon"></span>
+                        <span class="slds-media__body">
+                          <span class="slds-truncate" title="Formula Evaluates To True"> Formula Evaluates To True</span>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul>
+        {% include "_expression.html" %}
+      </ul>
+      <div class="slds-expression__buttons">
+        <button class="slds-button slds-button_neutral">
+          <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+          </svg>Add Condition</button>
+      </div>
+    </div> 
+    <!-- // panel body   -->
+    </div>
+  </div>
+
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
+  <script type="text/javascript">
+    $(function(){
+      var panel = $(".slds-panel");
+      $("#panel_expand").on("click" , function(){
+       $this= $(this);
+        panel.toggleClass("slds-size_x-large");
+        
+        if( panel.is(".slds-size_x-large") ){
+          console.log("open");
+          $this.find("use").attr("xlink:href" , "/assets/icons/utility-sprite/svg/symbols.svg#contract");
+          
+        } else { 
+          console.log("closed");
+          $this.find("use").attr("xlink:href" , "/assets/icons/utility-sprite/svg/symbols.svg#expand");
+        }
+        
+      })
+    })
+  </script>
+</body>
+</html>
