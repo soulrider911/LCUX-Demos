@@ -423,10 +423,28 @@ $panel-width: 320px;
   transition: width .25s ease;
   .slds-grid{
     flex-direction: column;
+    .slds-col{
+      padding-right:0;
+      padding-left: 0;
+    }
+  }
+  .details{
+    .slds-col{
+      width: 100%;
+    }
   }
   &.slds-size_x-large{
     .slds-grid{
       flex-direction: row;
+      .slds-col{
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+      }
+    }
+    .details{
+      .slds-col:nth-child(1), .slds-col:nth-child(2){
+        width: auto;
+      }
     }
   }
 }
